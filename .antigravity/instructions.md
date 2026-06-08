@@ -12,6 +12,7 @@
 | code-reviewer | `.ai/skills/code-reviewer/SKILL.md` |
 | devops-automator | `.ai/skills/devops-automator/SKILL.md` |
 | principal-engineer | `.ai/skills/principal-engineer/SKILL.md` |
+| principal-uefi-engineer | `.ai/skills/principal-uefi-engineer/SKILL.md` |
 | test-quality-evaluator | `.ai/skills/test-quality-evaluator/SKILL.md` |
 
 ## Composite Subagents

@@ -16,6 +16,7 @@ Read `.ai/AGENTS.md` for the full configuration and `.ai/rules/` for project rul
 | `code-reviewer` | Structured 16-point code review for commits and PRs — reviewability budget, commit hygiene, style/SO | `.ai/skills/code-reviewer/SKILL.md` |
 | `devops-automator` | CI/CD pipelines, Docker containers, deployment, and secrets hygiene — reproducible builds, minimal i | `.ai/skills/devops-automator/SKILL.md` |
 | `principal-engineer` | Brutally honest Principal Engineer. Gates every change on ROI, scalability, licensing, and security. | `.ai/skills/principal-engineer/SKILL.md` |
+| `principal-uefi-engineer` | Principal UEFI/firmware engineer for EDK II projects across x86 and ARM. Use when designing, reviewi | `.ai/skills/principal-uefi-engineer/SKILL.md` |
 | `test-quality-evaluator` | Testing and evaluation specialist — runs pytest, designs unit/integration/ regression tests, and sco | `.ai/skills/test-quality-evaluator/SKILL.md` |
 
 ## Subagents

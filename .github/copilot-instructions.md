@@ -15,6 +15,7 @@
 | `code-reviewer` | Structured 16-point code review for commits and PRs — reviewability budget, commit hygiene, style/SO |
 | `devops-automator` | CI/CD pipelines, Docker containers, deployment, and secrets hygiene — reproducible builds, minimal i |
 | `principal-engineer` | Brutally honest Principal Engineer. Gates every change on ROI, scalability, licensing, and security. |
+| `principal-uefi-engineer` | Principal UEFI/firmware engineer for EDK II projects across x86 and ARM. Use when designing, reviewi |
 | `test-quality-evaluator` | Testing and evaluation specialist — runs pytest, designs unit/integration/ regression tests, and sco |
 
 For full instructions, read `.ai/skills/<name>/SKILL.md`.
