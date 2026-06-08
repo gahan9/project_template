@@ -121,6 +121,27 @@ Full detail lives in `.ai/rules/`. Highlights:
 | `code-reviewer` | code review, PR review, review this diff | 16-point checklist, commit hygiene, config↔docs parity |
 | `test-quality-evaluator` | run tests, coverage, quality scoring, regression | Test execution, quality matrix, calibration |
 
+### Vendored skills (Apache-2.0, see `THIRD_PARTY_NOTICES.md`)
+
+| Skill | Trigger Phrases | Purpose |
+|-------|-----------------|---------|
+| `changelog-generator` | generate changelog, release notes | Turn git history into user-facing release notes |
+| `content-research-writer` | write blog post, draft article, content outline | Research-backed long-form writing partner |
+| `developer-growth-analysis` | coding patterns, growth report, skill gap | Analyze coding history, surface growth areas |
+| `file-organizer` | organize files, clean up downloads, duplicates | Context-aware file/folder organization |
+| `lead-research-assistant` | find leads, target companies, prospecting | Identify and qualify sales/BD leads |
+| `meeting-insights-analyzer` | meeting transcript, communication feedback | Behavioral/communication insights from transcripts |
+| `mcp-builder` | build MCP server, MCP tools, FastMCP, MCP SDK | Author high-quality MCP servers (Python/Node) |
+| `theme-factory` | apply theme, style artifact, color palette | Apply/generate cohesive color+font themes |
+| `webapp-testing` | test web app, playwright, browser screenshot | Playwright-based local web app testing |
+
+### License-clean originals (MIT, authored in-repo)
+
+| Skill | Trigger Phrases | Purpose |
+|-------|-----------------|---------|
+| `document-skills` | create docx, edit pdf, build pptx, xlsx | Pointer skill: defer to native/permissive doc tooling (no proprietary copy) |
+| `twitter-algorithm-optimizer` | optimize this tweet, improve reach | Clean-room tweet/X optimization (no AGPL code) |
+
 ## Subagents Reference
 
 | Subagent | Composes | Use for |
