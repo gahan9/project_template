@@ -120,20 +120,23 @@ SQ = chr(39) * 3
 
 def _count_non_docstring_lines(body: list[str]) -> int:
     count = 0
-    in_docstring = False
+    docstring_delim: str | None = None
     for line in body:
         stripped = line.strip()
-        if not in_docstring:
+        if docstring_delim is None:
             if stripped.startswith(TQ) or stripped.startswith(SQ):
                 delim = stripped[:3]
-                if stripped.endswith(delim) and len(stripped) > 3:
+                # Single-line docstring: the same delimiter also closes it on
+                # this line (e.g. '"""text"""').
+                if len(stripped) > 3 and stripped[3:].find(delim) != -1:
                     continue
-                in_docstring = True
+                docstring_delim = delim
                 continue
             count += 1
-        else:
-            if TQ in stripped or SQ in stripped:
-                in_docstring = False
+        # Close only on the delimiter that opened the docstring; a different
+        # triple quote nested in the body must not terminate it.
+        elif docstring_delim in stripped:
+            docstring_delim = None
     return count
 
 
