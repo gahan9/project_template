@@ -1,5 +1,6 @@
 ---
 name: test-quality-evaluator
+license: MIT
 aliases:
   - quality-evaluator
   - test-specialist

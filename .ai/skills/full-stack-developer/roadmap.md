@@ -1,3 +1,5 @@
+<!-- SPDX-License-Identifier: MIT -->
+
 # Competency Map, AI-Augmented Workflow & Sources
 
 The breadth a senior full-stack developer draws on, the modern AI-assisted way of

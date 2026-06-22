@@ -1,3 +1,5 @@
+<!-- SPDX-License-Identifier: MIT -->
+
 # Frameworks & Libraries Reference
 
 Deep-dive reference for the `principal-engineer` skill. Read this file when

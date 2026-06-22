@@ -1,5 +1,6 @@
 ---
 name: architect
+license: MIT
 description: >-
   Design and scalability decisions for backend services and AI pipelines.
   Combines structural package/service design with ROI, scalability, security,

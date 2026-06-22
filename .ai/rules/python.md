@@ -1,3 +1,5 @@
+<!-- SPDX-License-Identifier: MIT -->
+
 # Rule: Python Standards
 
 Applies to all `**/*.py`. These are always-on conventions for Python code.

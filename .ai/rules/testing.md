@@ -1,3 +1,5 @@
+<!-- SPDX-License-Identifier: MIT -->
+
 # Rule: Testing
 
 Use `pytest`. Tests are part of the change, not a follow-up.

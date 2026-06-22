@@ -1,3 +1,5 @@
+<!-- SPDX-License-Identifier: MIT -->
+
 # Universal AI Skill Format Specification
 
 > **Version**: 1.0

@@ -1,3 +1,5 @@
+<!-- SPDX-License-Identifier: MIT -->
+
 # Mathematical Foundations Reference
 
 Applied mathematics reference for the `principal-engineer` skill. Read this file

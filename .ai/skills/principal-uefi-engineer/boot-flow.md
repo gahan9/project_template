@@ -1,3 +1,5 @@
+<!-- SPDX-License-Identifier: MIT -->
+
 # PI / UEFI Boot Flow (Reference)
 
 Source of truth: PI Specification 1.9 (Vols 1–5) and UEFI 2.11. Wiki summary: <https://github.com/tianocore/tianocore.github.io/wiki/PI-Boot-Flow>.

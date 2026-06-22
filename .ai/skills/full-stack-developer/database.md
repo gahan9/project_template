@@ -1,3 +1,5 @@
+<!-- SPDX-License-Identifier: MIT -->
+
 # Data Layer Playbook
 
 Reference for choosing, modeling, and operating the data layer. Load when

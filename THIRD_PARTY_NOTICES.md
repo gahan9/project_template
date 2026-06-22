@@ -6,6 +6,31 @@ This project's own source is MIT-licensed. It additionally vendors third-party
 skills under `.ai/skills/`. Those skills retain their original licenses; this
 file records their provenance and any modifications, per their license terms.
 
+## First-party content (MIT)
+
+All content authored in this repository is MIT-licensed (see `LICENSE`).
+First-party skills declare `license: MIT` in their `SKILL.md` frontmatter; other
+first-party source and docs carry an `SPDX-License-Identifier: MIT` header.
+
+The following skills are original to this repository and licensed under MIT:
+
+| Skill (`.ai/skills/<dir>`) | License |
+|----------------------------|---------|
+| `ai-engineer`              | MIT |
+| `backend-architect`        | MIT |
+| `clean-code`               | MIT |
+| `code-reviewer`            | MIT |
+| `devops-automator`         | MIT |
+| `document-skills`          | MIT (pointer-only; see below) |
+| `full-stack-developer`     | MIT |
+| `immersive-3d-ux`          | MIT |
+| `principal-engineer`       | MIT |
+| `principal-uefi-engineer`  | MIT |
+| `test-quality-evaluator`   | MIT |
+| `twitter-algorithm-optimizer` | MIT (clean-room; see below) |
+
+Composite subagents under `.ai/subagents/` are likewise MIT.
+
 ## Vendored AI skills
 
 The following skills were imported from

@@ -1,5 +1,6 @@
 ---
 name: principal-uefi-engineer
+license: MIT
 aliases:
   - uefi-eng
   - firmware-review

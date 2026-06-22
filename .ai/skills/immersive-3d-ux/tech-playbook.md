@@ -1,3 +1,5 @@
+<!-- SPDX-License-Identifier: MIT -->
+
 # 3D Web Tech Playbook
 
 Deep-dive companion to `SKILL.md`. Read the section you need; don't load it all.

@@ -1,5 +1,6 @@
 ---
 name: full-stack-developer
+license: MIT
 aliases:
   - fullstack
   - fs-dev

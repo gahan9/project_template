@@ -1,5 +1,6 @@
 ---
 name: code-reviewer
+license: MIT
 aliases:
   - pr-reviewer
   - commit-reviewer

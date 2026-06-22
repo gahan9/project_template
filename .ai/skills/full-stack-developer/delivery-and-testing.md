@@ -1,3 +1,5 @@
+<!-- SPDX-License-Identifier: MIT -->
+
 # Delivery & Testing Playbook
 
 Reference for testing, version control, CI/CD, containers, deployment, and

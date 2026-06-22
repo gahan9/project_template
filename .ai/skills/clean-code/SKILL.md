@@ -1,5 +1,6 @@
 ---
 name: clean-code
+license: MIT
 aliases:
   - uncle-bob
   - readability-review

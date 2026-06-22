@@ -1,5 +1,6 @@
 ---
 name: devops-automator
+license: MIT
 aliases:
   - ci-cd-specialist
   - deployment-engineer

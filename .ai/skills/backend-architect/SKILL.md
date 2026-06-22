@@ -1,5 +1,6 @@
 ---
 name: backend-architect
+license: MIT
 aliases:
   - package-architect
   - service-architect

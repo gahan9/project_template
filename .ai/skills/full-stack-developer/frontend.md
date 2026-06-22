@@ -1,3 +1,5 @@
+<!-- SPDX-License-Identifier: MIT -->
+
 # Frontend Playbook
 
 Reference for the UI layer. Load when building or reviewing client-side code.

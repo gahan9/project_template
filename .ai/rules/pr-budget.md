@@ -1,3 +1,5 @@
+<!-- SPDX-License-Identifier: MIT -->
+
 # Rule: Pull Request Budget
 
 A reviewer should clear any diff in **30 minutes or less**. Keep PRs small and
