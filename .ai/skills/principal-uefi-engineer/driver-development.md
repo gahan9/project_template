@@ -1,3 +1,5 @@
+<!-- SPDX-License-Identifier: MIT -->
+
 # UEFI Driver Development: Patterns, Arch, Tables & Testing (Reference)
 
 ## Step 0 — Decide driver type before coding

@@ -1,3 +1,5 @@
+<!-- SPDX-License-Identifier: MIT -->
+
 # EDK II Build System, File Formats & CI (Reference)
 
 Repos: `edk2` (core), `edk2-platforms` (boards/silicon), `edk2-non-osi` (binary blobs). Tooling: BaseTools + edk2-pytool-extensions/library (Stuart).

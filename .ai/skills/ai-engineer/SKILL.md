@@ -1,5 +1,6 @@
 ---
 name: ai-engineer
+license: MIT
 aliases:
   - llm-engineer
   - graph-engineer

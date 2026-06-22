@@ -148,4 +148,11 @@ full index.
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+First-party content is MIT — see [LICENSE](LICENSE). First-party skills declare
+`license: MIT` in their `SKILL.md` frontmatter, and other first-party source and
+docs carry an `SPDX-License-Identifier: MIT` header.
+
+Some skills under `.ai/skills/` are vendored from upstream projects and retain
+their original licenses (e.g. Apache-2.0). Their provenance, license files, and
+any modifications are recorded in
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

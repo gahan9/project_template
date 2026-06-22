@@ -1,5 +1,6 @@
 ---
 name: principal-engineer
+license: MIT
 aliases:
   - principal-eng
   - pe-review

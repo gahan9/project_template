@@ -1,5 +1,6 @@
 ---
 name: immersive-3d-ux
+license: MIT
 aliases:
   - 3d-ux
   - webgl-ux

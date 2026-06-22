@@ -1,3 +1,5 @@
+<!-- SPDX-License-Identifier: MIT -->
+
 # Rule: Commit Messages
 
 Follow Conventional Commits with a mandatory sign-off.

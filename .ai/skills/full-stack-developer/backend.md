@@ -1,3 +1,5 @@
+<!-- SPDX-License-Identifier: MIT -->
+
 # Backend Playbook
 
 Reference for the API/server layer. Covers REST design, the two default stacks

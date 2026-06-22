@@ -1,5 +1,6 @@
 ---
 name: release-engineer
+license: MIT
 description: >-
   Build, test, and ship readiness. Combines CI/CD and container automation with
   test execution and quality scoring. Use when preparing a release or verifying

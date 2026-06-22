@@ -1,3 +1,5 @@
+<!-- SPDX-License-Identifier: MIT -->
+
 # Specifications & Learning Resources (Reference)
 
 Always cite the **exact spec and section** (or wiki page) behind a recommendation. Verify against the latest published revision; these are the current authoritative versions.
