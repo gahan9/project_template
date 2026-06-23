@@ -54,6 +54,10 @@ delegates_to:
   - code-reviewer
   - devops-automator
   - test-quality-evaluator
+  - database-architect
+  - aws-cloud-architect
+  - gcp-cloud-architect
+  - azure-cloud-architect
 ---
 
 # Full-Stack Developer
@@ -94,6 +98,10 @@ Core convictions:
 - Pure package/transport architecture decisions → `backend-architect`.
 - Deep CI/CD pipeline or container infra ownership → `devops-automator`.
 - Hardware/firmware/UEFI work → `principal-uefi-engineer`.
+- Cloud platform architecture (landing zones, service selection, security,
+  cost) → `aws-cloud-architect` / `gcp-cloud-architect` / `azure-cloud-architect`.
+- Deep data-layer work (modeling, indexing/plan tuning, sharding, HA/DR,
+  migrations) → `database-architect`.
 
 ## Operating Model
 
