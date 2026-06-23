@@ -120,6 +120,11 @@ Full detail lives in `.ai/rules/`. Highlights:
 | `devops-automator` | CI/CD, Docker, deployment, secrets, pipeline | Container images, pipeline automation, secret hygiene |
 | `code-reviewer` | code review, PR review, review this diff | 16-point checklist, commit hygiene, config↔docs parity |
 | `test-quality-evaluator` | run tests, coverage, quality scoring, regression | Test execution, quality matrix, calibration |
+| `full-stack-developer` | full stack, react, rest api, django, build a web app | End-to-end web design/build/review across the stack |
+| `aws-cloud-architect` | aws architecture, well-architected, landing zone, vpc, iam | Principal AWS design/review for regulated workloads |
+| `gcp-cloud-architect` | gcp architecture, google cloud, bigquery, gke, vpc sc | Principal Google Cloud design/review for regulated workloads |
+| `azure-cloud-architect` | azure architecture, landing zone, caf/alz, aks, entra id | Principal Azure design/review for regulated workloads |
+| `database-architect` | data model, index this query, partition/shard, migration | Engine-agnostic data-layer design, tuning, HA/DR, migrations |
 
 ### Vendored skills (Apache-2.0, see `THIRD_PARTY_NOTICES.md`)
 
