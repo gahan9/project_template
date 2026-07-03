@@ -27,6 +27,7 @@
 | meeting-insights-analyzer | `.ai/skills/meeting-insights-analyzer/SKILL.md` |
 | principal-engineer | `.ai/skills/principal-engineer/SKILL.md` |
 | principal-uefi-engineer | `.ai/skills/principal-uefi-engineer/SKILL.md` |
+| rocm-contributor | `.ai/skills/rocm-contributor/SKILL.md` |
 | test-quality-evaluator | `.ai/skills/test-quality-evaluator/SKILL.md` |
 | theme-factory | `.ai/skills/theme-factory/SKILL.md` |
 | twitter-algorithm-optimizer | `.ai/skills/twitter-algorithm-optimizer/SKILL.md` |

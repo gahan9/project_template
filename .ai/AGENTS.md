@@ -125,6 +125,7 @@ Full detail lives in `.ai/rules/`. Highlights:
 | `gcp-cloud-architect` | gcp architecture, google cloud, bigquery, gke, vpc sc | Principal Google Cloud design/review for regulated workloads |
 | `azure-cloud-architect` | azure architecture, landing zone, caf/alz, aks, entra id | Principal Azure design/review for regulated workloads |
 | `database-architect` | data model, index this query, partition/shard, migration | Engine-agnostic data-layer design, tuning, HA/DR, migrations |
+| `rocm-contributor` | rocm, therock, hip kernel, amdgpu, gfx target, rocm pr | Principal ROCm/HIP contributor: PRs, reviews, build/release |
 
 ### Vendored skills (Apache-2.0, see `THIRD_PARTY_NOTICES.md`)
 

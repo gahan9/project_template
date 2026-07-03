@@ -38,6 +38,7 @@
 | `meeting-insights-analyzer` | Analyzes meeting transcripts and recordings to uncover behavioral patterns, communication insights,  | `.ai/skills/meeting-insights-analyzer/SKILL.md` |
 | `principal-engineer` | Brutally honest Principal Engineer. Gates every change on ROI, scalability, licensing, and security. | `.ai/skills/principal-engineer/SKILL.md` |
 | `principal-uefi-engineer` | Principal UEFI/firmware engineer for EDK II projects across x86 and ARM. Use when designing, reviewi | `.ai/skills/principal-uefi-engineer/SKILL.md` |
+| `rocm-contributor` | Principal-level ROCm/HIP contributor for AMD GPU software — expert in GPU programming (HIP/ROCm/CUDA | `.ai/skills/rocm-contributor/SKILL.md` |
 | `test-quality-evaluator` | Testing and evaluation specialist — runs pytest, designs unit/integration/ regression tests, and sco | `.ai/skills/test-quality-evaluator/SKILL.md` |
 | `theme-factory` | Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML la | `.ai/skills/theme-factory/SKILL.md` |
 | `twitter-algorithm-optimizer` | Analyze and rewrite tweets/X posts for reach and engagement using a clean-room model of publicly doc | `.ai/skills/twitter-algorithm-optimizer/SKILL.md` |
