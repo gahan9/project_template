@@ -116,7 +116,7 @@ Full detail lives in `.ai/rules/`. Highlights:
 | `principal-engineer` | architecture, security, scalability, ROI, GPU | ROI gate, licensing, security, GPU compute, packaging |
 | `ai-engineer` | pipeline node, agent graph, confidence threshold, LLM call | Rule-based-first routing, structured outputs, gateway client |
 | `backend-architect` | service layout, connector, config, transport, state | Package layout, async connectors, settings management |
-| `clean-code` | readability, clarity, simplicity, story flow | Function story-flow, abstraction value |
+| `clean-code` | readability, clarity, simplicity, story flow, over-engineering audit, find bloat | Function story-flow, abstraction value, repo-wide over-engineering audit |
 | `devops-automator` | CI/CD, Docker, deployment, secrets, pipeline | Container images, pipeline automation, secret hygiene |
 | `code-reviewer` | code review, PR review, review this diff | 16-point checklist, commit hygiene, config↔docs parity |
 | `test-quality-evaluator` | run tests, coverage, quality scoring, regression | Test execution, quality matrix, calibration |

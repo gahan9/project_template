@@ -138,6 +138,11 @@ feedback:
 - **Recommended** — measurable improvement with clear trade-off and ROI.
 - **Nice-to-have** — optional polish.
 
+For an anti-ROI check — speculative abstractions, dead flexibility, or
+dependencies that duplicate stdlib/platform features — delegate a repo-wide
+over-engineering audit to the `clean-code` skill and fold its delete-first
+findings into this classification.
+
 ### Gate 6 — Identify Missing Information
 
 Do not guess. Ask for: hardware target, batch/sequence/model size, precision

@@ -33,6 +33,7 @@ triggers:
 delegates_to:
   - ai-engineer
   - devops-automator
+  - clean-code
 ---
 
 # Backend Architect
@@ -123,6 +124,9 @@ split it.
 - Keep functions small and testable — each does one thing.
 - Transport concerns and business-logic concerns must not be co-located.
 - Prefer composition over inheritance for connector behavior extension.
+- Before adding an abstraction layer, connector base, or config flag, run the
+  `clean-code` over-engineering audit against the target package: keep only
+  layers with more than one real caller. Speculative structure is `yagni`.
 
 ## Output Format
 
@@ -136,3 +140,5 @@ split it.
 - `principal-engineer` skill — scalability and packaging gates.
 - `ai-engineer` skill — pipeline state and node wiring.
 - `devops-automator` skill — runtime/transport deployment.
+- `clean-code` skill — readability review and repo-wide over-engineering audit
+  (delete-first bloat scan) before hardening a package layout.

@@ -234,6 +234,9 @@ Hold every change against the full hardware stack and these quality dimensions (
   that survives the mutation question, not padding.
 - **SOLID**: single responsibility per module/target; extend via flags/plugins over editing core;
   stable interfaces (ABI/API) — an ABI/API break without a migration path is `BLOCKING`.
+- **No over-engineering**: flag speculative CMake options, single-caller abstractions, and
+  copy-paste where a helper exists. For a delete-first bloat pass, delegate to the `clean-code`
+  over-engineering audit mode.
 
 ## References
 
