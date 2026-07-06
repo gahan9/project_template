@@ -4,12 +4,16 @@ license: MIT
 aliases:
   - uncle-bob
   - readability-review
-version: "1.0.0"
+  - over-engineering-audit
+  - bloat-audit
+version: "1.1.0"
 description: >-
   Code readability and craft advocate drawing on Robert C. Martin's Clean Code
   and Software Craftsmanship. Reads code as a story — judges whether intent is
   clear from name/signature, body flows top-to-bottom, side effects are absent,
-  and abstractions pay for themselves. Applies judgment, not mechanical rules.
+  and abstractions pay for themselves. Also runs a repo-wide over-engineering
+  audit: a ranked, delete-first list of bloat to cut. Applies judgment, not
+  mechanical rules.
 platforms:
   cursor: true
   claude: true
@@ -45,6 +49,11 @@ triggers:
   - "does this abstraction earn its keep"
   - "story flow"
   - "readability review"
+  - "audit for over-engineering"
+  - "over-engineering audit"
+  - "what can I delete"
+  - "find bloat"
+  - "audit this codebase"
 delegates_to: []
 ---
 
@@ -73,6 +82,13 @@ Activate when the user asks any of the following (or close equivalents):
 - "Does this abstraction earn its keep?"
 - "Clean code review."
 - "Is this easy to follow?"
+- "Audit this codebase / this module for over-engineering."
+- "What can I delete from this repo?" / "Find the bloat."
+
+The first five requests run the **story-reading review** (Instructions §1-6, output
+sections READABILITY + SIMPLICITY). The last two run the **over-engineering
+audit** (Instructions §7, output section OVER-ENGINEERING AUDIT) — a wider,
+delete-first scan rather than a close read of one diff.
 
 Activate alongside (not instead of) other review skills. A full code review may
 run this skill for readability *and* a naming reviewer *and* a performance
@@ -143,9 +159,39 @@ write the exact comment.
 If the messy version is actually clearer, say so. If a proposed refactor trades
 one kind of complexity for another, name both sides.
 
+### 7 — Over-Engineering Audit (repo-wide mode)
+
+When the request is "audit for over-engineering", "what can I delete", or "find
+bloat", switch from close-reading one diff to scanning the target scope (a repo,
+package, or directory) for complexity that earns nothing. Same judgment as the
+story-reading review, wider aperture.
+
+Scope discipline: this mode reports **over-engineering and complexity only**.
+Correctness bugs, security holes, and performance regressions are out of scope —
+route those to `code-reviewer` / `principal-engineer`. This mode lists findings;
+it does not apply the cuts unless the user then asks.
+
+Hunt for these categories (label each finding with the tag):
+
+| Tag | What to look for | Replacement to name |
+|-----|------------------|---------------------|
+| `delete` | Dead code, unused parameters/flags, speculative "just in case" features, unreachable branches | Nothing — remove it |
+| `stdlib` | Hand-rolled logic the language's standard library already ships | Name the exact stdlib function/module |
+| `native` | A dependency or code doing what the platform/framework already does | Name the built-in feature |
+| `yagni` | An abstraction with one implementation, an interface with one caller, config nobody sets, a factory with one product | Inline it to the single concrete form |
+| `wrap` | A wrapper/adapter/indirection layer that only forwards to one thing | Call the underlying thing directly |
+| `shrink` | Same behavior, fewer lines — verbose control flow, redundant state, needless generics | Show the shorter form |
+
+Rank findings **biggest cut first** (most lines or most dependencies removed at
+the top). Every finding must name its replacement and, where knowable, cite
+evidence that the cut is safe (call-site count, import search, single
+implementation). Do not propose a cut you cannot justify.
+
 ## Output Format
 
-Produce exactly two sections in this order:
+For the **story-reading review**, produce exactly two sections in this order:
+READABILITY then SIMPLICITY. For the **over-engineering audit**, produce the
+single OVER-ENGINEERING AUDIT section instead. Do not mix the two formats.
 
 ### READABILITY
 
@@ -165,8 +211,31 @@ For every deletion you propose, name the replacement and its approximate line
 cost. For every abstraction you question, cite evidence (search results, test
 imports, call-site count) that removal is safe.
 
+### OVER-ENGINEERING AUDIT
+
+One line per finding, ranked biggest cut first:
+
+```
+<tag> <what to cut> — <replacement>. [path:line]
+```
+
+Close with a one-line tally of the total reduction, e.g.:
+
+```
+net: -<N> lines, -<M> dependencies removable.
+```
+
+If nothing is over-engineered, say so plainly — do not manufacture findings:
+
+```
+Lean already. Nothing worth cutting.
+```
+
 ## References
 
 - Martin, Robert C. *Clean Code: A Handbook of Agile Software Craftsmanship.* Prentice Hall, 2008.
 - Martin, Robert C. *The Clean Coder: A Code of Conduct for Professional Programmers.* Prentice Hall, 2011.
 - Mancuso, Sandro. *The Software Craftsman: Professionalism, Pragmatism, Pride.* Prentice Hall, 2014.
+- Over-engineering audit mode: concept inspired by the public `ponytail-audit`
+  skill (<https://github.com/DietrichGebert/ponytail>). Authored clean-room —
+  original prose and tag taxonomy; no upstream text reproduced.

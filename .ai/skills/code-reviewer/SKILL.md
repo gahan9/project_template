@@ -156,6 +156,9 @@ Run the project's configured linter and type checker. For Python (Ruff + mypy):
 
 - Search the diff for repeated 5+ line blocks. If found, extract a helper.
 - Cross-check: does the change reimplement something that already exists?
+- For a broader bloat pass beyond the diff (dead flexibility, single-caller
+  abstractions, stdlib re-implementations), delegate to the `clean-code`
+  over-engineering audit mode.
 
 #### 2.5 Optimization opportunities
 
