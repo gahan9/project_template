@@ -14,6 +14,7 @@
 | clean-code | `.ai/skills/clean-code/SKILL.md` |
 | code-reviewer | `.ai/skills/code-reviewer/SKILL.md` |
 | content-research-writer | `.ai/skills/content-research-writer/SKILL.md` |
+| cuda-contributor | `.ai/skills/cuda-contributor/SKILL.md` |
 | database-architect | `.ai/skills/database-architect/SKILL.md` |
 | developer-growth-analysis | `.ai/skills/developer-growth-analysis/SKILL.md` |
 | devops-automator | `.ai/skills/devops-automator/SKILL.md` |

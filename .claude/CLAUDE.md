@@ -18,6 +18,7 @@ Read `.ai/AGENTS.md` for the full configuration and `.ai/rules/` for project rul
 | `clean-code` | Code readability and craft advocate drawing on Robert C. Martin's Clean Code and Software Craftsmans | `.ai/skills/clean-code/SKILL.md` |
 | `code-reviewer` | Structured 16-point code review for commits and PRs — reviewability budget, commit hygiene, style/SO | `.ai/skills/code-reviewer/SKILL.md` |
 | `content-research-writer` | Assists in writing high-quality content by conducting research, adding citations, improving hooks, i | `.ai/skills/content-research-writer/SKILL.md` |
+| `cuda-contributor` | Principal-level CUDA/NVIDIA-GPU contributor for NVIDIA GPU software — expert in CUDA C++ / CUDA Pyth | `.ai/skills/cuda-contributor/SKILL.md` |
 | `database-architect` | Principal database architect with 20+ years across regulated industries (fintech, healthcare, automo | `.ai/skills/database-architect/SKILL.md` |
 | `developer-growth-analysis` | Analyzes your recent Claude Code chat history to identify coding patterns, development gaps, and are | `.ai/skills/developer-growth-analysis/SKILL.md` |
 | `devops-automator` | CI/CD pipelines, Docker containers, deployment, and secrets hygiene — reproducible builds, minimal i | `.ai/skills/devops-automator/SKILL.md` |
