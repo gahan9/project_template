@@ -126,6 +126,7 @@ Full detail lives in `.ai/rules/`. Highlights:
 | `azure-cloud-architect` | azure architecture, landing zone, caf/alz, aks, entra id | Principal Azure design/review for regulated workloads |
 | `database-architect` | data model, index this query, partition/shard, migration | Engine-agnostic data-layer design, tuning, HA/DR, migrations |
 | `rocm-contributor` | rocm, therock, hip kernel, amdgpu, gfx target, rocm pr | Principal ROCm/HIP contributor: PRs, reviews, build/release |
+| `cuda-contributor` | cuda, cuda-samples, nvcc, cuda kernel, compute capability, cuda pr | Principal CUDA/NVIDIA-GPU contributor: PRs, reviews, build/test |
 
 ### Vendored skills (Apache-2.0, see `THIRD_PARTY_NOTICES.md`)
 
