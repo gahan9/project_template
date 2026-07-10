@@ -15,6 +15,7 @@
 | `backend-architect` | Service and package architecture for Python backends — transport layer, async connectors with timeou |
 | `changelog-generator` | Automatically creates user-facing changelogs from git commits by analyzing commit history, categoriz |
 | `clean-code` | Code readability and craft advocate drawing on Robert C. Martin's Clean Code and Software Craftsmans |
+| `cluster-ops` |  |
 | `code-reviewer` | Structured 16-point code review for commits and PRs — reviewability budget, commit hygiene, style/SO |
 | `content-research-writer` | Assists in writing high-quality content by conducting research, adding citations, improving hooks, i |
 | `cuda-contributor` | Principal-level CUDA/NVIDIA-GPU contributor for NVIDIA GPU software — expert in CUDA C++ / CUDA Pyth |
