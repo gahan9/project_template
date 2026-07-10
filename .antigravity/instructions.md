@@ -12,6 +12,7 @@
 | backend-architect | `.ai/skills/backend-architect/SKILL.md` |
 | changelog-generator | `.ai/skills/changelog-generator/SKILL.md` |
 | clean-code | `.ai/skills/clean-code/SKILL.md` |
+| cluster-ops | `.ai/skills/cluster-ops/SKILL.md` |
 | code-reviewer | `.ai/skills/code-reviewer/SKILL.md` |
 | content-research-writer | `.ai/skills/content-research-writer/SKILL.md` |
 | cuda-contributor | `.ai/skills/cuda-contributor/SKILL.md` |
