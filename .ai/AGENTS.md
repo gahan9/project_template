@@ -146,6 +146,7 @@ Full detail lives in `.ai/rules/`. Highlights:
 
 | Skill | Trigger Phrases | Purpose |
 |-------|-----------------|---------|
+| `expert-tutor` | teach me, tutor me, explain like I'm five then go deep, build a curriculum, mentor me, walk me through, learn step by step | Mentor router: module-by-module teaching (layman-clear, expert-deep) with citations, runnable code, tradeoffs; delegates to specialist skills; multi-modal delivery (mermaid, canvas, slides, images, storyboard) |
 | `document-skills` | create docx, edit pdf, build pptx, xlsx | Pointer skill: defer to native/permissive doc tooling (no proprietary copy) |
 | `twitter-algorithm-optimizer` | optimize this tweet, improve reach | Clean-room tweet/X optimization (no AGPL code) |
 

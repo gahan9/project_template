@@ -20,6 +20,7 @@
 | developer-growth-analysis | `.ai/skills/developer-growth-analysis/SKILL.md` |
 | devops-automator | `.ai/skills/devops-automator/SKILL.md` |
 | document-skills | `.ai/skills/document-skills/SKILL.md` |
+| expert-tutor | `.ai/skills/expert-tutor/SKILL.md` |
 | file-organizer | `.ai/skills/file-organizer/SKILL.md` |
 | full-stack-developer | `.ai/skills/full-stack-developer/SKILL.md` |
 | gcp-cloud-architect | `.ai/skills/gcp-cloud-architect/SKILL.md` |

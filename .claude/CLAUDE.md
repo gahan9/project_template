@@ -24,6 +24,7 @@ Read `.ai/AGENTS.md` for the full configuration and `.ai/rules/` for project rul
 | `developer-growth-analysis` | Analyzes your recent Claude Code chat history to identify coding patterns, development gaps, and are | `.ai/skills/developer-growth-analysis/SKILL.md` |
 | `devops-automator` | CI/CD pipelines, Docker containers, deployment, and secrets hygiene — reproducible builds, minimal i | `.ai/skills/devops-automator/SKILL.md` |
 | `document-skills` | Pointer skill for creating, editing, and analyzing Office and PDF documents (.docx, .pdf, .pptx, .xl | `.ai/skills/document-skills/SKILL.md` |
+| `expert-tutor` |  | `.ai/skills/expert-tutor/SKILL.md` |
 | `file-organizer` | Intelligently organizes your files and folders across your computer by understanding context, findin | `.ai/skills/file-organizer/SKILL.md` |
 | `full-stack-developer` | Senior full-stack web developer with 30+ years of breadth across frontend, backend, databases, and d | `.ai/skills/full-stack-developer/SKILL.md` |
 | `gcp-cloud-architect` | Principal cloud architect with 20+ years across regulated industries (fintech, healthcare, automotiv | `.ai/skills/gcp-cloud-architect/SKILL.md` |
