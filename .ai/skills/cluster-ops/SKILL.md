@@ -9,13 +9,17 @@ description: >-
   EFA, Tofu), scheduler choice (Slurm, Kubernetes+Volcano/Kueue, LSF, PBS, Ray,
   SUNK), parallel storage, reliability/checkpointing, observability, cost, and
   cloud provider patterns (AWS, GCP, Azure, Lambda, CoreWeave, TensorWave,
-  DigitalOcean). Grounds designs in ACM Gordon Bell Prize reference systems.
-  Use when the user asks to design, size, provision, scale, benchmark, review,
-  or troubleshoot a compute/HPC/AI/GPU cluster, choose a scheduler or fabric,
-  plan capacity, or compare cloud GPU offerings.
+  DigitalOcean). Includes hybrid OpenShift platform engineering — federated
+  identity, GitOps, RHACM multi-cluster governance, service mesh, serverless,
+  and VM-to-container modernization (ARO/OpenShift Virtualization) with
+  explicit trade-offs, off-track risk flags, and remedy plans. Grounds designs
+  in ACM Gordon Bell Prize reference systems. Use when the user asks to design,
+  size, provision, scale, benchmark, review, or troubleshoot a compute/HPC/AI/GPU
+  cluster, choose a scheduler or fabric, plan capacity, compare cloud GPU
+  offerings, or evaluate hybrid OpenShift/Kubernetes platform patterns.
 license: MIT
 metadata:
-  version: 1.0.0
+  version: 1.1.0
   authors: [gsaraiya]
   portability: Agent Skills open standard (Cursor, Claude Code, Copilot, Codex, Antigravity, Windsurf, Zed)
 ---
@@ -51,6 +55,7 @@ Task Progress:
 - [ ] 8. Secure + govern (multi-tenant, secrets, licensing)
 - [ ] 9. Cost model + build vs. rent decision
 - [ ] 10. Validate against a reference design
+- [ ] 11. (Hybrid OCP) Apply platform pattern gates if Kubernetes/OpenShift is in scope
 ```
 
 ### 1. Classify the workload
@@ -174,6 +179,25 @@ top-500 reference system in `reference-architectures.md` and confirm the
 interconnect ratio, checkpoint strategy, and precision choices are consistent
 with what has actually worked at that scale.
 
+### 11. (Hybrid OCP) Apply platform pattern gates
+
+When the design includes **OpenShift, ARO, or multi-cluster Kubernetes** (not
+just bare Slurm/GPU fabric), run the gated decision flow in
+`openshift-hybrid-design-patterns.md` **before** adopting service mesh,
+serverless, or VM modernization waves.
+
+**Do not pre-install all patterns.** Sequence: identity + GitOps → RHACM
+governance → scoped mesh → serverless for fit workloads → VM modernization in
+parallel waves.
+
+For every pattern choice, explicitly state:
+1. **Trade-off accepted** (what you gain vs. what you pay)
+2. **Risk flag** to watch (symptom that the design is going off-track)
+3. **Remedy/precaution** if the flag fires
+
+GPU/HPC and Slurm estates may coexist with OCP — mesh and serverless apply to
+the Kubernetes slice, not the batch fabric. Flag misfit workloads early.
+
 ## Reference material (progressive disclosure)
 
 - `scaling-tiers.md` — SMB→enterprise→exascale decision tables and archetypes.
@@ -183,6 +207,8 @@ with what has actually worked at that scale.
   Frontier, Fugaku, Sunway, El Capitan, LUMI, Aurora) and the design lesson each
   teaches.
 - `citations.md` — papers, standards, and vendor docs to cite and where to verify.
+- `openshift-hybrid-design-patterns.md` — hybrid OCP pattern catalog, off-track
+  risk flags, remedy plans, and gated decision framework (IBM ARO + MeatyBytes).
 
 ## Documentation & citation rules (apply to every answer and change)
 
@@ -226,6 +252,10 @@ run it (or read it) to snapshot cluster health before deeper work.
 3. Can it scale one tier up without a rewrite? If not, is that acceptable?
 4. Reliability & security: checkpointing, health, isolation, secrets, licensing.
 5. Cost: is $/useful-result defensible vs. the rent-vs-own alternative?
+6. **Hybrid OCP (if applicable):** Are platform patterns sequenced correctly?
+   Any risk flags from `openshift-hybrid-design-patterns.md` active? Is there a
+   confirmed remedy if identity sprawl, mesh-before-inventory, or GitOps secret
+   leakage is detected?
 
 Classify feedback as 🔴 **Critical** (blocks correctness/scale/security) or
 🟢 **Good to have** (non-breaking optimization). Appreciate solid designs

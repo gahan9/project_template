@@ -29,6 +29,7 @@ SOURCE = HOME / ".cursor" / "skills" / SKILL_NAME
 #: Codex/Copilot/Antigravity user skill directories once they standardize paths.
 TARGETS = [
     HOME / ".claude" / "skills" / SKILL_NAME,
+    Path(r"C:\Projects\project_template\.ai\skills") / SKILL_NAME,
 ]
 
 #: Never mirror the sync tooling's own transient artifacts.

@@ -52,8 +52,19 @@ records change; always confirm current specifics against the live source.
   Capacity Blocks for ML — `docs.aws.amazon.com`.
 - GCP: A3/A4, Cloud TPU, GKE, Cluster Toolkit, Parallelstore — `cloud.google.com`.
 - Azure: ND-series, CycleCloud, Azure Managed Lustre — `learn.microsoft.com`.
+- **Azure Red Hat OpenShift (ARO)** + OpenShift Virtualization — Red Hat/Azure docs;
+  IBM hybrid modernization overview:
+  https://www.ibm.com/new/product-blog/enterprise-ready-hybrid-cloud-why-cios-choose-red-hat-openshift-virtualization
 - Lambda (`lambda.ai`), CoreWeave (`coreweave.com`), TensorWave
   (`tensorwave.com`), DigitalOcean/Paperspace (`digitalocean.com`).
+
+## Hybrid OpenShift / platform engineering
+
+- MeatyBytes — Top Design Patterns for the Modern Hybrid Cloud with OpenShift
+  (Part 1): https://meatybytes.io/posts/openshift/architecture/ocp-patterns/patterns-pt-1/
+- Red Hat OpenShift Service Mesh, GitOps, Advanced Cluster Management (RHACM),
+  Serverless, Virtualization — `docs.redhat.com` / `access.redhat.com`.
+- Kubernetes Patterns (Sidecar, Ambassador, etc.) — Red Hat / O'Reilly reference.
 
 ## Adapted community skills (attribution)
 

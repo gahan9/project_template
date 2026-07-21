@@ -38,6 +38,11 @@ them. Always confirm current instance names/specs against live vendor docs
   intra-node.
 - **Orchestrate:** **Azure CycleCloud** (Slurm/PBS/LSF), **AKS** + Kubernetes,
   **Azure Batch**, Azure ML.
+- **Managed OpenShift:** **Azure Red Hat OpenShift (ARO)** — managed OCP with
+  built-in RHEL licensing; **OpenShift Virtualization** for unified VM+container
+  on one control plane (progressive modernization, not forced rewrite). Align
+  identity with **Azure AD/OIDC** for federated RBAC across hybrid footprints.
+  See `openshift-hybrid-design-patterns.md` for pattern sequencing and risk flags.
 - **Storage:** **Azure Managed Lustre**, Azure NetApp Files, Blob (with NFS/
   BlobFuse), Azure HPC Cache.
 
@@ -83,6 +88,11 @@ them. Always confirm current instance names/specs against live vendor docs
   inference; topology-aware placement to keep gangs on one rail/spine.
 - **Multi-tenant:** namespaces + ResourceQuota + NetworkPolicy + MIG slices;
   RBAC/SSO; cost via OpenCost/Kubecost.
+- **Hybrid OCP platform (OpenShift/ARO):** Federated Identity (AD/Keycloak/Azure AD),
+  **OpenShift GitOps** (Argo CD), **RHACM** (fleet governance), **OpenShift Service
+  Mesh** (scoped mTLS/traffic policy), **OpenShift Serverless** (Knative — fit
+  workloads only), **OpenShift Virtualization** (VM+container unified platform).
+  Do not adopt all at once — use gated sequencing in `openshift-hybrid-design-patterns.md`.
 
 ## Schedulers — selection guide
 
