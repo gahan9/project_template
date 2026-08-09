@@ -84,11 +84,49 @@ python .ai/setup-adapters.py --dry-run  # Preview changes
 python .ai/setup-adapters.py --platform cursor  # Single platform
 ```
 
-To expose `.ai/skills/` to Cursor's native skill discovery:
+To expose `.ai/skills/` to Cursor's native skill discovery in this repo:
 
 ```bash
 python .ai/setup-links.py
 ```
+
+## Installing Skills System-Wide
+
+`setup-links.py` wires skills into *this repo*. To make them available in every
+project on the machine, install them into the user-level skill directory that
+each platform reads (`<config>/skills/<name>/`):
+
+```bash
+python .ai/install-skills.py --list                          # skills + detected platforms
+python .ai/install-skills.py --all --platform all            # everything, everywhere
+python .ai/install-skills.py --skill clean-code --platform claude,cursor
+python .ai/install-skills.py --all --platform codex --copy   # standalone copy
+python .ai/install-skills.py --uninstall --all --platform all
+```
+
+Wrappers exist for people who would rather not type the interpreter:
+`.ai/install-skills.ps1` (Windows) and `.ai/install-skills.sh` (POSIX). Both pass
+arguments straight through and default to `--list`.
+
+| Platform | Install directory | Env override |
+|----------|-------------------|--------------|
+| Claude Code | `~/.claude/skills/` | `AI_SKILLS_CLAUDE_DIR` |
+| Cursor | `~/.cursor/skills/` | `AI_SKILLS_CURSOR_DIR` |
+| OpenAI Codex | `~/.codex/skills/` | `AI_SKILLS_CODEX_DIR` |
+| GitHub Copilot | `~/.copilot/skills/` | `AI_SKILLS_COPILOT_DIR` |
+| Google Antigravity | `~/.antigravity/skills/` | `AI_SKILLS_ANTIGRAVITY_DIR` |
+
+Behaviour worth knowing:
+
+- **Links by default** (junction on Windows, symlink on POSIX) so edits in this
+  repo take effect immediately. `--copy` produces a standalone copy instead, and
+  a copy is also the automatic fallback when linking is not permitted.
+- **Nothing is overwritten silently.** An already-installed skill reports
+  `exists`; `--force` replaces it. A directory this installer did not create
+  reports `foreign` and is left alone unless `--overwrite-foreign` is passed.
+- **Platforms that are not installed are skipped**, not created, unless
+  `--create-missing` is passed.
+- **`--dry-run`** prints the plan without touching disk.
 
 ## Project Conventions (summary)
 
