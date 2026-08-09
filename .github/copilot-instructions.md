@@ -17,6 +17,7 @@
 | `clean-code` | Code readability and craft advocate drawing on Robert C. Martin's Clean Code and Software Craftsmans |
 | `cluster-ops` |  |
 | `code-reviewer` | Structured 16-point code review for commits and PRs — reviewability budget, commit hygiene, style/SO |
+| `content-marketing-expert` | Packages marketing content for Reels, Shorts, blogs, and social derivatives with plain-language copy |
 | `content-research-writer` | Assists in writing high-quality content by conducting research, adding citations, improving hooks, i |
 | `cuda-contributor` | Principal-level CUDA/NVIDIA-GPU contributor for NVIDIA GPU software — expert in CUDA C++ / CUDA Pyth |
 | `database-architect` | Principal database architect with 20+ years across regulated industries (fintech, healthcare, automo |
