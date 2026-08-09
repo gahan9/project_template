@@ -20,6 +20,7 @@ The following skills are original to this repository and licensed under MIT:
 | `backend-architect`        | MIT |
 | `clean-code`               | MIT |
 | `code-reviewer`            | MIT |
+| `content-marketing-expert` | MIT |
 | `devops-automator`         | MIT |
 | `document-skills`          | MIT (pointer-only; see below) |
 | `full-stack-developer`     | MIT |

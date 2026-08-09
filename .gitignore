@@ -37,6 +37,9 @@ htmlcov/
 # Cursor skill links (regenerate with setup-links.py)
 .cursor/skills/
 
+# Campaign working state (content-marketing-expert memory shots)
+.content-campaign/
+
 # OS / editor
 .DS_Store
 Thumbs.db
