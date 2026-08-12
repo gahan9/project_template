@@ -13,14 +13,17 @@ names — fork it, rename `your_package`, and start building.
 ## Why this template
 
 - **One source of truth.** No copy-paste drift across five tools' config files.
-- **Four composable primitives.** Rules, hooks, skills, and subagents, each with
-  a clear home and a clear contract.
+- **Five composable primitives.** Rules, hooks, skills, subagents, and agentic
+  memory, each with a clear home and a clear contract.
 - **Deterministic guardrails.** Hooks block `.env` access, lint on edit, scan for
   secrets/SPDX, and forecast token cost — independent of which assistant runs.
 - **Portable skills.** Skills follow a universal format (`.ai/SKILL-FORMAT.md`)
   and are translated to each platform by `setup-adapters.py`.
+- **Persistent, typed memory.** `.ai/memory/` gives agents durable, markdown-only
+  memory across sessions — episodic, semantic, procedural, prospective, and
+  parametric — openable directly as an Obsidian vault.
 
-## The four primitives
+## The five primitives
 
 ```mermaid
 flowchart TD
@@ -29,6 +32,7 @@ flowchart TD
     HOOKS["hooks/*.py + hooks-config.json"]
     SKILLS["skills/<name>/SKILL.md"]
     SUBS["subagents/*.md"]
+    MEM["memory/ (5 typed stores)"]
   end
   GEN["setup-adapters.py + setup-links.py"]
   canonical --> GEN
@@ -45,6 +49,7 @@ flowchart TD
 | **Hooks** | `.ai/hooks/*.py` | Deterministic guardrails fired on tool/agent events |
 | **Skills** | `.ai/skills/<name>/SKILL.md` | Reusable, trigger-activated capability modules |
 | **Subagents** | `.ai/subagents/*.md` | Composite agents that delegate to one or more skills |
+| **Memory** | `.ai/memory/` | Durable, typed, markdown-only agent memory across sessions |
 
 ## Repository layout
 
@@ -55,8 +60,9 @@ flowchart TD
 ├── rules/                # python, security, git-commits, pr-budget, testing
 ├── hooks/                # guard-env, ensure-uv-env, lint, review, estimate, runner
 ├── hooks-config.json     # Budget / review / lint tunables
-├── skills/               # 7 portable skills (see table below)
-├── subagents/            # 3 composite subagents
+├── skills/               # portable skills (see table below)
+├── subagents/            # composite subagents
+├── memory/               # Agentic memory: 5 typed stores, schema, governance
 ├── setup-adapters.py     # Generates platform adapters
 └── setup-links.py        # Links .ai/skills into .cursor/skills
 
@@ -109,6 +115,9 @@ AGENTS.md                 # OpenAI Codex + Google Antigravity entry
 | `devops-automator` | CI/CD, Docker, deployment, secrets, pipeline | Container images, pipeline gates, secret hygiene |
 | `code-reviewer` | code review, PR review, review this diff | 16-point checklist, commit hygiene, config↔docs parity |
 | `test-quality-evaluator` | run tests, coverage, quality scoring, calibration | Test execution, quality matrix, regression and calibration |
+| `memory-curator` | remember this, write a memory note, record this decision, add to the backlog | Write/dedupe/promote/prune notes in `.ai/memory/`, staleness sweeps |
+| `contribution-summary` | weekly summary, contribution report | Weekly summary from git history + memory, no vendor dependency |
+| `roadmap-review` | roadmap review, milestone confidence | Confidence-scored feedback on `.ai/memory/prospective/roadmap.md` |
 
 ## Available subagents
 
@@ -117,6 +126,7 @@ AGENTS.md                 # OpenAI Codex + Google Antigravity entry
 | `reviewer` | code-reviewer, clean-code | End-to-end review of a diff or PR |
 | `architect` | backend-architect, principal-engineer | Design and scalability decisions |
 | `release-engineer` | devops-automator, test-quality-evaluator | Build, test, and ship readiness |
+| `memory-steward` | memory-curator, code-reviewer | Memory hygiene with a review-ready diff |
 
 ## Hooks
 
@@ -140,11 +150,32 @@ Tune behavior in `.ai/hooks-config.json` or via environment overrides:
 | `AI_HOOK_LINT_ENABLED=0` | Disable lint-on-edit |
 | `AI_HOOK_BUDGET_MAX=10` | Raise the cost-approval threshold |
 
+## Agentic memory
+
+`.ai/memory/` gives agents durable, session-spanning memory with no runtime
+dependency — plain markdown notes with strict frontmatter, openable directly
+as an Obsidian vault.
+
+| Type | Answers | Lifecycle |
+|------|---------|-----------|
+| Episodic | What happened, and when? | Cheap to write, short-lived, unverified by default |
+| Semantic | What is true? | PR-reviewed before it counts as fact |
+| Procedural | How do we do this? | Stabilizes into a `.ai/skills/` entry once proven |
+| Prospective | What must happen next? | Local backlog/roadmap; optional GitHub Issues mirror |
+| Parametric | What do we assume the model knows? | A single register, not a note store |
+
+Start with `.ai/memory/README.md` (the contract), `.ai/memory/SCHEMA.md` (the
+frontmatter fields), and `.ai/memory/GOVERNANCE.md` (trust levels, promotion,
+policy modes). Retrieval budgets live in the `memory` block of
+`.ai/hooks-config.json`. Write and curate notes with the `memory-curator`
+skill; generate weekly summaries and roadmap feedback with
+`contribution-summary` and `roadmap-review`.
+
 ## Conventions
 
 Project rules are modular under `.ai/rules/`: `python.md`, `security.md`,
-`git-commits.md`, `pr-budget.md`, and `testing.md`. See `.ai/AGENTS.md` for the
-full index.
+`git-commits.md`, `pr-budget.md`, `testing.md`, and `memory.md`. See
+`.ai/AGENTS.md` for the full index.
 
 ## License
 

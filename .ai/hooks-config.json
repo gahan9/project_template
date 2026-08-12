@@ -21,5 +21,22 @@
     "verbosity": "terse",
     "reasoningHint": "minimal",
     "maxIssues": 5
+  },
+  "memory": {
+    "enabled": true,
+    "root": ".ai/memory",
+    "policyMode": "audit",
+    "retrieval": {
+      "order": ["procedural", "semantic", "prospective", "episodic"],
+      "maxNotes": 8,
+      "maxTokensPerNote": 800,
+      "maxTotalTokens": 6000,
+      "perType": {
+        "episodic": { "maxNotes": 3, "maxAgeDays": 14 },
+        "semantic": { "maxNotes": 4 },
+        "procedural": { "maxNotes": 3 },
+        "prospective": { "maxNotes": 2 }
+      }
+    }
   }
 }

@@ -29,8 +29,12 @@ The following skills are original to this repository and licensed under MIT:
 | `principal-uefi-engineer`  | MIT |
 | `test-quality-evaluator`   | MIT |
 | `twitter-algorithm-optimizer` | MIT (clean-room; see below) |
+| `memory-curator`           | MIT (clean-room; see below) |
+| `contribution-summary`     | MIT (clean-room; see below) |
+| `roadmap-review`           | MIT (clean-room; see below) |
 
-Composite subagents under `.ai/subagents/` are likewise MIT.
+Composite subagents under `.ai/subagents/` are likewise MIT, including
+`memory-steward`.
 
 ## Vendored AI skills
 
@@ -71,3 +75,28 @@ were authored in-repo (MIT) — no upstream code or text was copied:
 |-------|------------------|--------------------------|
 | `document-skills` (docx, pdf, pptx, xlsx) | Proprietary (© Anthropic, all rights reserved) — forbids copying, retaining copies outside Anthropic services, and derivative works | `.ai/skills/document-skills/SKILL.md` — a **pointer-only** skill (MIT) that defers to the platform's native document skill at runtime or to permissively licensed libraries; no proprietary content vendored. |
 | `twitter-algorithm-optimizer` | AGPL-3.0 (blocked copyleft) | `.ai/skills/twitter-algorithm-optimizer/SKILL.md` — a **clean-room** skill (MIT) restating publicly known ranking principles in original prose; no AGPL source reproduced. |
+
+## Concepts referenced, no code vendored
+
+The agentic memory primitive (`.ai/memory/`, `.ai/rules/memory.md`,
+`.ai/skills/memory-curator/`, `.ai/subagents/memory-steward.md`) restates
+concepts from the following public sources in original prose. No files,
+code, or verbatim text were copied from any of them; no proprietary or
+internal system was consulted for this content.
+
+| Source | License / status | What was referenced |
+|--------|-------------------|----------------------|
+| [Microsoft Agent Governance Toolkit](https://github.com/microsoft/agent-governance-toolkit) | MIT, public | Policy modes (strict/permissive/audit), "memory as context, never executable policy" |
+| OWASP Agentic AI Top 10 (2026) | Public standard | Memory poisoning as a named risk category; treating retrieved memory as untrusted input |
+| NIST AI Risk Management Framework | Public standard | Govern/Map/Measure/Manage framing for the governance lifecycle |
+| MADR / Nygard ADR format | Public, widely used convention | `proposed`/`accepted`/`deprecated`/`superseded` status vocabulary |
+| Obsidian app configuration format | Public, documented by Obsidian | `.obsidian/app.json` keys (`newLinkFormat`, `useMarkdownLinks`, etc.) |
+| Cognitive-science memory taxonomy (episodic, semantic, procedural, prospective, parametric) | Public domain concepts | The five memory types and what each answers |
+
+Two clean-room reporting skills, `contribution-summary` and
+`roadmap-review`, are original implementations that read local git history
+and `.ai/memory/` only — they carry no vendor branding and no dependency on
+any particular issue tracker, wiki, or presentation format. Each documents
+an optional, explicitly-opt-in handoff to a locally installed personal
+skill with a similar name, if one happens to be present outside this
+repository; no such skill is bundled with or required by this template.

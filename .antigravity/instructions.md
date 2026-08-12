@@ -16,6 +16,7 @@
 | code-reviewer | `.ai/skills/code-reviewer/SKILL.md` |
 | content-marketing-expert | `.ai/skills/content-marketing-expert/SKILL.md` |
 | content-research-writer | `.ai/skills/content-research-writer/SKILL.md` |
+| contribution-summary | `.ai/skills/contribution-summary/SKILL.md` |
 | cuda-contributor | `.ai/skills/cuda-contributor/SKILL.md` |
 | database-architect | `.ai/skills/database-architect/SKILL.md` |
 | developer-growth-analysis | `.ai/skills/developer-growth-analysis/SKILL.md` |
@@ -29,8 +30,10 @@
 | lead-research-assistant | `.ai/skills/lead-research-assistant/SKILL.md` |
 | mcp-builder | `.ai/skills/mcp-builder/SKILL.md` |
 | meeting-insights-analyzer | `.ai/skills/meeting-insights-analyzer/SKILL.md` |
+| memory-curator | `.ai/skills/memory-curator/SKILL.md` |
 | principal-engineer | `.ai/skills/principal-engineer/SKILL.md` |
 | principal-uefi-engineer | `.ai/skills/principal-uefi-engineer/SKILL.md` |
+| roadmap-review | `.ai/skills/roadmap-review/SKILL.md` |
 | rocm-contributor | `.ai/skills/rocm-contributor/SKILL.md` |
 | test-quality-evaluator | `.ai/skills/test-quality-evaluator/SKILL.md` |
 | theme-factory | `.ai/skills/theme-factory/SKILL.md` |
@@ -42,6 +45,7 @@
 | Subagent | Source |
 |----------|--------|
 | architect | `.ai/subagents/architect.md` |
+| memory-steward | `.ai/subagents/memory-steward.md` |
 | release-engineer | `.ai/subagents/release-engineer.md` |
 | reviewer | `.ai/subagents/reviewer.md` |
 

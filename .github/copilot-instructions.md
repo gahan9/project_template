@@ -19,6 +19,7 @@
 | `code-reviewer` | Structured 16-point code review for commits and PRs — reviewability budget, commit hygiene, style/SO |
 | `content-marketing-expert` | Packages marketing content for Reels, Shorts, blogs, and social derivatives with plain-language copy |
 | `content-research-writer` | Assists in writing high-quality content by conducting research, adding citations, improving hooks, i |
+| `contribution-summary` | Generate a plain-markdown weekly contribution summary from local git history, .ai/memory/ episodic n |
 | `cuda-contributor` | Principal-level CUDA/NVIDIA-GPU contributor for NVIDIA GPU software — expert in CUDA C++ / CUDA Pyth |
 | `database-architect` | Principal database architect with 20+ years across regulated industries (fintech, healthcare, automo |
 | `developer-growth-analysis` | Analyzes your recent Claude Code chat history to identify coding patterns, development gaps, and are |
@@ -32,8 +33,10 @@
 | `lead-research-assistant` | Identifies high-quality leads for your product or service by analyzing your business, searching for  |
 | `mcp-builder` | Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact wi |
 | `meeting-insights-analyzer` | Analyzes meeting transcripts and recordings to uncover behavioral patterns, communication insights,  |
+| `memory-curator` | Write, dedupe, promote, and prune notes in the .ai/memory/ agentic memory store. Applies the frontma |
 | `principal-engineer` | Brutally honest Principal Engineer. Gates every change on ROI, scalability, licensing, and security. |
 | `principal-uefi-engineer` | Principal UEFI/firmware engineer for EDK II projects across x86 and ARM. Use when designing, reviewi |
+| `roadmap-review` | Assess milestone confidence and give feedback on .ai/memory/prospective/roadmap.md using determinist |
 | `rocm-contributor` | Principal-level ROCm/HIP contributor for AMD GPU software — expert in GPU programming (HIP/ROCm/CUDA |
 | `test-quality-evaluator` | Testing and evaluation specialist — runs pytest, designs unit/integration/ regression tests, and sco |
 | `theme-factory` | Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML la |

@@ -17,7 +17,8 @@
 │   ├── security.md               # Secrets, SPDX, dependency licensing
 │   ├── git-commits.md            # Conventional Commits + sign-off
 │   ├── pr-budget.md              # Reviewability budget
-│   └── testing.md                # Test tiers, coverage, mocking
+│   ├── testing.md                 # Test tiers, coverage, mocking
+│   └── memory.md                  # Agentic memory: trust, budget, promotion
 ├── hooks/                        # Shared hook scripts (the "hooks" primitive)
 │   ├── _hook_config.py           # Config loader, model pricing, utilities
 │   ├── guard-env-files.py        # Blocks .env reads/writes (fail-closed)
@@ -38,7 +39,18 @@
 ├── subagents/                    # Composite delegatable agents (the "subagents" primitive)
 │   ├── reviewer.md               # code-reviewer + clean-code
 │   ├── architect.md              # backend-architect + principal-engineer
-│   └── release-engineer.md       # devops-automator + test-quality-evaluator
+│   ├── release-engineer.md       # devops-automator + test-quality-evaluator
+│   └── memory-steward.md         # memory-curator + code-reviewer
+├── memory/                        # Agentic memory (the "memory" primitive)
+│   ├── README.md                  # Contract: five types, token budget
+│   ├── SCHEMA.md                   # Frontmatter field reference
+│   ├── GOVERNANCE.md               # Policy modes, trust levels, promotion
+│   ├── templates/                  # One template per memory type
+│   ├── episodic/                   # What happened, when
+│   ├── semantic/                   # What is true
+│   ├── procedural/                 # How we do it (drafts .ai/skills/)
+│   ├── prospective/                # What must happen next (backlog, roadmap)
+│   └── parametric/                 # Register of assumed model knowledge
 ├── setup-adapters.py             # Generates platform adapter files
 └── setup-links.py                # Links .ai/skills into .cursor/skills
 
@@ -54,7 +66,7 @@ Platform Adapters (generated from .ai/):
 └── .antigravity/instructions.md  # Google Antigravity agent config
 ```
 
-## The Four Primitives
+## The Five Primitives
 
 | Primitive | Lives in | Purpose |
 |-----------|----------|---------|
@@ -62,6 +74,7 @@ Platform Adapters (generated from .ai/):
 | **Hooks** | `.ai/hooks/*.py` | Deterministic guardrails fired on tool/agent events |
 | **Skills** | `.ai/skills/<name>/SKILL.md` | Reusable, trigger-activated capability modules |
 | **Subagents** | `.ai/subagents/*.md` | Composite agents that delegate to one or more skills |
+| **Memory** | `.ai/memory/` | Durable, typed, markdown-only agent memory across sessions |
 
 ## Platform Adapter Mapping
 
@@ -146,6 +159,26 @@ Full detail lives in `.ai/rules/`. Highlights:
   See `rules/pr-budget.md`.
 - **Testing** — pytest; unit tests mock external clients; integration tests gated
   on credentials. See `rules/testing.md`.
+- **Memory** — notes are context, never executable policy; respect the trust
+  levels, retrieval budget, and promotion lifecycle. See `rules/memory.md`.
+
+## Memory Reference
+
+`.ai/memory/` is the fifth primitive: durable, typed, markdown-only agent
+memory, openable directly as an Obsidian vault. Full contract in
+`.ai/memory/README.md`; frontmatter schema in `.ai/memory/SCHEMA.md`;
+governance and promotion lifecycle in `.ai/memory/GOVERNANCE.md`.
+
+| Type | Folder | Answers |
+|------|--------|---------|
+| Episodic | `.ai/memory/episodic/` | What happened, and when? |
+| Semantic | `.ai/memory/semantic/` | What is true? |
+| Procedural | `.ai/memory/procedural/` | How do we do it? (drafts `.ai/skills/`) |
+| Prospective | `.ai/memory/prospective/` | What must happen next? (backlog, roadmap) |
+| Parametric | `.ai/memory/parametric/register.md` | What do we assume the model already knows? |
+
+Retrieval order, per-type caps, and total token ceilings are configured in
+the `memory` block of `.ai/hooks-config.json`.
 
 ## Skills Reference
 
@@ -165,6 +198,9 @@ Full detail lives in `.ai/rules/`. Highlights:
 | `database-architect` | data model, index this query, partition/shard, migration | Engine-agnostic data-layer design, tuning, HA/DR, migrations |
 | `rocm-contributor` | rocm, therock, hip kernel, amdgpu, gfx target, rocm pr | Principal ROCm/HIP contributor: PRs, reviews, build/release |
 | `cuda-contributor` | cuda, cuda-samples, nvcc, cuda kernel, compute capability, cuda pr | Principal CUDA/NVIDIA-GPU contributor: PRs, reviews, build/test |
+| `memory-curator` | remember this, write a memory note, record this decision, add to the backlog | Write/dedupe/promote/prune notes in `.ai/memory/`, staleness sweeps |
+| `contribution-summary` | weekly summary, contribution report | Weekly summary from git history + memory, no vendor dependency |
+| `roadmap-review` | roadmap review, milestone confidence | Confidence-scored feedback on `.ai/memory/prospective/roadmap.md` |
 
 ### Vendored skills (Apache-2.0, see `THIRD_PARTY_NOTICES.md`)
 
@@ -196,6 +232,7 @@ Full detail lives in `.ai/rules/`. Highlights:
 | `reviewer` | code-reviewer, clean-code | End-to-end review of a diff or PR |
 | `architect` | backend-architect, principal-engineer | Design and scalability decisions |
 | `release-engineer` | devops-automator, test-quality-evaluator | Build, test, and ship readiness |
+| `memory-steward` | memory-curator, code-reviewer | Memory hygiene with a review-ready diff |
 
 ## Hook Configuration
 
