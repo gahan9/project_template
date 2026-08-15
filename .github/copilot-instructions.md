@@ -23,7 +23,7 @@
 | `cuda-contributor` | Principal-level CUDA/NVIDIA-GPU contributor for NVIDIA GPU software — expert in CUDA C++ / CUDA Pyth |
 | `database-architect` | Principal database architect with 20+ years across regulated industries (fintech, healthcare, automo |
 | `developer-growth-analysis` | Analyzes your recent Claude Code chat history to identify coding patterns, development gaps, and are |
-| `devops-automator` | CI/CD pipelines, Docker containers, deployment, and secrets hygiene — reproducible builds, minimal i |
+| `devops-automator` |  |
 | `document-skills` | Pointer skill for creating, editing, and analyzing Office and PDF documents (.docx, .pdf, .pptx, .xl |
 | `expert-tutor` |  |
 | `file-organizer` | Intelligently organizes your files and folders across your computer by understanding context, findin |
