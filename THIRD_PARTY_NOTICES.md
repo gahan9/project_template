@@ -32,9 +32,16 @@ The following skills are original to this repository and licensed under MIT:
 | `memory-curator`           | MIT (clean-room; see below) |
 | `contribution-summary`     | MIT (clean-room; see below) |
 | `roadmap-review`           | MIT (clean-room; see below) |
+| `trading-analyst`          | MIT (clean-room; see below) |
+| `quant-methods`            | MIT (clean-room; see below) |
+| `market-regime-analyst`    | MIT (clean-room; see below) |
+| `technical-chart-analyst`  | MIT (clean-room; see below) |
+| `fundamental-news-analyst` | MIT (clean-room; see below) |
+| `portfolio-strategist`     | MIT (clean-room; see below) |
+| `trade-critic`             | MIT (clean-room; see below) |
 
 Composite subagents under `.ai/subagents/` are likewise MIT, including
-`memory-steward`.
+`memory-steward` and `trading-desk`.
 
 ## Vendored AI skills
 
@@ -100,3 +107,17 @@ any particular issue tracker, wiki, or presentation format. Each documents
 an optional, explicitly-opt-in handoff to a locally installed personal
 skill with a similar name, if one happens to be present outside this
 repository; no such skill is bundled with or required by this template.
+
+The trading-analyst skill family (`trading-analyst`, `quant-methods`,
+`market-regime-analyst`, `technical-chart-analyst`,
+`fundamental-news-analyst`, `portfolio-strategist`, `trade-critic`, and the
+`trading-desk` subagent) restates public trading, risk-management, and
+quantitative-finance methodology in original prose. No files, code, or
+verbatim text were copied from either source below; both are cited per-skill
+in each `SKILL.md`'s References section for the specific methods that
+inspired that skill.
+
+| Source | License / status | What was referenced |
+|--------|-------------------|----------------------|
+| [tradermonty/claude-trading-skills](https://github.com/tradermonty/claude-trading-skills) | MIT, public | Regime-first risk gating (risk budget decided before candidates), breadth/distribution-day monitoring, stage/VCP-style base-pattern discipline, news-reaction-failure testing, dividend/value screening, portfolio rebalance review, signal postmortems |
+| [agiprolabs/claude-trading-skills](https://github.com/agiprolabs/claude-trading-skills) | MIT, public | Quantitative method breadth — fractional Kelly sizing, volatility/vol-targeting, correlation and cointegration diagnostics, walk-forward validation and overfitting detection, portfolio risk analytics, tax-lot accounting discipline |

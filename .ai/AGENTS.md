@@ -201,6 +201,13 @@ the `memory` block of `.ai/hooks-config.json`.
 | `memory-curator` | remember this, write a memory note, record this decision, add to the backlog | Write/dedupe/promote/prune notes in `.ai/memory/`, staleness sweeps |
 | `contribution-summary` | weekly summary, contribution report | Weekly summary from git history + memory, no vendor dependency |
 | `roadmap-review` | roadmap review, milestone confidence | Confidence-scored feedback on `.ai/memory/prospective/roadmap.md` |
+| `trading-analyst` | trade idea, portfolio review, rebalance, price target, market outlook | Router: deterministic-first, cited, confidence-scored trading/investment analysis |
+| `quant-methods` | position size, kelly criterion, sharpe ratio, walk forward, is this overfit | Expectancy, sizing, risk-adjusted return, mean-reversion math, overfitting checks |
+| `market-regime-analyst` | market regime, market breadth, risk on or risk off | Fail-closed regime score and net-exposure ceiling gating all trade advice |
+| `technical-chart-analyst` | read this chart, chart pattern, support and resistance, breakout | Multi-timeframe structure, base patterns, volume confirmation, chart-image reading |
+| `fundamental-news-analyst` | fundamental case, valuation, earnings, catalyst | Business-quality/valuation screens, catalyst classification, news-reaction-failure test |
+| `portfolio-strategist` | portfolio review, rebalance, asset allocation, concentration risk | Target-weight drift, caps, trim/add/hold flags, tax-aware rebalance sequencing |
+| `trade-critic` | critique this trade, what am I missing, postmortem | Base-rate/sample-size checks, bias flags, pre-mortem, mandatory invalidation |
 
 ### Vendored skills (Apache-2.0, see `THIRD_PARTY_NOTICES.md`)
 
@@ -233,6 +240,7 @@ the `memory` block of `.ai/hooks-config.json`.
 | `architect` | backend-architect, principal-engineer | Design and scalability decisions |
 | `release-engineer` | devops-automator, test-quality-evaluator | Build, test, and ship readiness |
 | `memory-steward` | memory-curator, code-reviewer | Memory hygiene with a review-ready diff |
+| `trading-desk` | trading-analyst, market-regime-analyst, technical-chart-analyst, fundamental-news-analyst, quant-methods, portfolio-strategist, trade-critic | End-to-end trading/investment decision: regime gate through red-team critique |
 
 ## Hook Configuration
 
