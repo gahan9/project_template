@@ -37,18 +37,25 @@
 | `expert-tutor` |  | `.ai/skills/expert-tutor/SKILL.md` |
 | `file-organizer` | Intelligently organizes your files and folders across your computer by understanding context, findin | `.ai/skills/file-organizer/SKILL.md` |
 | `full-stack-developer` | Senior full-stack web developer with 30+ years of breadth across frontend, backend, databases, and d | `.ai/skills/full-stack-developer/SKILL.md` |
+| `fundamental-news-analyst` | Fundamental research and news-reaction analysis — business quality and valuation screens, catalyst c | `.ai/skills/fundamental-news-analyst/SKILL.md` |
 | `gcp-cloud-architect` | Principal cloud architect with 20+ years across regulated industries (fintech, healthcare, automotiv | `.ai/skills/gcp-cloud-architect/SKILL.md` |
 | `immersive-3d-ux` | Designer-engineer for immersive 3D web experiences. Combines a bold, anti-slop aesthetic point of vi | `.ai/skills/immersive-3d-ux/SKILL.md` |
 | `lead-research-assistant` | Identifies high-quality leads for your product or service by analyzing your business, searching for  | `.ai/skills/lead-research-assistant/SKILL.md` |
+| `market-regime-analyst` | Determines current market regime (risk-on/neutral/risk-off) from breadth, trend participation, distr | `.ai/skills/market-regime-analyst/SKILL.md` |
 | `mcp-builder` | Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact wi | `.ai/skills/mcp-builder/SKILL.md` |
 | `meeting-insights-analyzer` | Analyzes meeting transcripts and recordings to uncover behavioral patterns, communication insights,  | `.ai/skills/meeting-insights-analyzer/SKILL.md` |
 | `memory-curator` | Write, dedupe, promote, and prune notes in the .ai/memory/ agentic memory store. Applies the frontma | `.ai/skills/memory-curator/SKILL.md` |
+| `portfolio-strategist` | Portfolio-level allocation, concentration/correlation review, and rebalance planning — target weight | `.ai/skills/portfolio-strategist/SKILL.md` |
 | `principal-engineer` | Brutally honest Principal Engineer. Gates every change on ROI, scalability, licensing, and security. | `.ai/skills/principal-engineer/SKILL.md` |
 | `principal-uefi-engineer` | Principal UEFI/firmware engineer for EDK II projects across x86 and ARM. Use when designing, reviewi | `.ai/skills/principal-uefi-engineer/SKILL.md` |
+| `quant-methods` | Quantitative foundation for trading decisions — expectancy, fractional Kelly position sizing, volati | `.ai/skills/quant-methods/SKILL.md` |
 | `roadmap-review` | Assess milestone confidence and give feedback on .ai/memory/prospective/roadmap.md using determinist | `.ai/skills/roadmap-review/SKILL.md` |
 | `rocm-contributor` | Principal-level ROCm/HIP contributor for AMD GPU software — expert in GPU programming (HIP/ROCm/CUDA | `.ai/skills/rocm-contributor/SKILL.md` |
+| `technical-chart-analyst` | Chart-expertise skill for multi-timeframe trend structure, stage analysis, base/contraction patterns | `.ai/skills/technical-chart-analyst/SKILL.md` |
 | `test-quality-evaluator` | Testing and evaluation specialist — runs pytest, designs unit/integration/ regression tests, and sco | `.ai/skills/test-quality-evaluator/SKILL.md` |
 | `theme-factory` | Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML la | `.ai/skills/theme-factory/SKILL.md` |
+| `trade-critic` | Red-team pass applied to every thesis before delivery — base-rate and sample-size checks, narrative/ | `.ai/skills/trade-critic/SKILL.md` |
+| `trading-analyst` | Experienced-trader router combining quantitative rigor, fundamental/news research, and chart experti | `.ai/skills/trading-analyst/SKILL.md` |
 | `twitter-algorithm-optimizer` | Analyze and rewrite tweets/X posts for reach and engagement using a clean-room model of publicly doc | `.ai/skills/twitter-algorithm-optimizer/SKILL.md` |
 | `webapp-testing` | Toolkit for interacting with and testing local web applications using Playwright. Supports verifying | `.ai/skills/webapp-testing/SKILL.md` |
 
@@ -60,5 +67,6 @@
 | `memory-steward` | Curates the agentic memory store end to end: writes and dedupes notes, runs staleness sweeps, and op | `.ai/subagents/memory-steward.md` |
 | `release-engineer` | Build, test, and ship readiness. Combines CI/CD and container automation with test execution and qua | `.ai/subagents/release-engineer.md` |
 | `reviewer` | End-to-end review of a diff or pull request. Combines the structured 16-point review with a deep rea | `.ai/subagents/reviewer.md` |
+| `trading-desk` | Composite trading-research agent for full thesis, portfolio-review, and rebalance workflows. Chains  | `.ai/subagents/trading-desk.md` |
 
 Read the relevant source file under `.ai/` and follow its instructions.

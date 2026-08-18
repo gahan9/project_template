@@ -28,18 +28,25 @@
 | `expert-tutor` |  |
 | `file-organizer` | Intelligently organizes your files and folders across your computer by understanding context, findin |
 | `full-stack-developer` | Senior full-stack web developer with 30+ years of breadth across frontend, backend, databases, and d |
+| `fundamental-news-analyst` | Fundamental research and news-reaction analysis — business quality and valuation screens, catalyst c |
 | `gcp-cloud-architect` | Principal cloud architect with 20+ years across regulated industries (fintech, healthcare, automotiv |
 | `immersive-3d-ux` | Designer-engineer for immersive 3D web experiences. Combines a bold, anti-slop aesthetic point of vi |
 | `lead-research-assistant` | Identifies high-quality leads for your product or service by analyzing your business, searching for  |
+| `market-regime-analyst` | Determines current market regime (risk-on/neutral/risk-off) from breadth, trend participation, distr |
 | `mcp-builder` | Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact wi |
 | `meeting-insights-analyzer` | Analyzes meeting transcripts and recordings to uncover behavioral patterns, communication insights,  |
 | `memory-curator` | Write, dedupe, promote, and prune notes in the .ai/memory/ agentic memory store. Applies the frontma |
+| `portfolio-strategist` | Portfolio-level allocation, concentration/correlation review, and rebalance planning — target weight |
 | `principal-engineer` | Brutally honest Principal Engineer. Gates every change on ROI, scalability, licensing, and security. |
 | `principal-uefi-engineer` | Principal UEFI/firmware engineer for EDK II projects across x86 and ARM. Use when designing, reviewi |
+| `quant-methods` | Quantitative foundation for trading decisions — expectancy, fractional Kelly position sizing, volati |
 | `roadmap-review` | Assess milestone confidence and give feedback on .ai/memory/prospective/roadmap.md using determinist |
 | `rocm-contributor` | Principal-level ROCm/HIP contributor for AMD GPU software — expert in GPU programming (HIP/ROCm/CUDA |
+| `technical-chart-analyst` | Chart-expertise skill for multi-timeframe trend structure, stage analysis, base/contraction patterns |
 | `test-quality-evaluator` | Testing and evaluation specialist — runs pytest, designs unit/integration/ regression tests, and sco |
 | `theme-factory` | Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML la |
+| `trade-critic` | Red-team pass applied to every thesis before delivery — base-rate and sample-size checks, narrative/ |
+| `trading-analyst` | Experienced-trader router combining quantitative rigor, fundamental/news research, and chart experti |
 | `twitter-algorithm-optimizer` | Analyze and rewrite tweets/X posts for reach and engagement using a clean-room model of publicly doc |
 | `webapp-testing` | Toolkit for interacting with and testing local web applications using Playwright. Supports verifying |
 
