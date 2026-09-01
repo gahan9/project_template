@@ -24,14 +24,15 @@ Read `.ai/AGENTS.md` for the full configuration and `.ai/rules/` for project rul
 | `cuda-contributor` | Principal-level CUDA/NVIDIA-GPU contributor for NVIDIA GPU software — expert in CUDA C++ / CUDA Pyth | `.ai/skills/cuda-contributor/SKILL.md` |
 | `database-architect` | Principal database architect with 20+ years across regulated industries (fintech, healthcare, automo | `.ai/skills/database-architect/SKILL.md` |
 | `developer-growth-analysis` | Analyzes your recent Claude Code chat history to identify coding patterns, development gaps, and are | `.ai/skills/developer-growth-analysis/SKILL.md` |
-| `devops-automator` |  | `.ai/skills/devops-automator/SKILL.md` |
+| `devops-automator` | CI/CD pipelines, Docker containers, deployment, and secrets hygiene — reproducible builds, minimal i | `.ai/skills/devops-automator/SKILL.md` |
 | `document-skills` | Pointer skill for creating, editing, and analyzing Office and PDF documents (.docx, .pdf, .pptx, .xl | `.ai/skills/document-skills/SKILL.md` |
-| `expert-tutor` |  | `.ai/skills/expert-tutor/SKILL.md` |
+| `expert-tutor` | Expert tutor and mentor that teaches ANY topic module-by-module — from first-principles intuition a  | `.ai/skills/expert-tutor/SKILL.md` |
 | `file-organizer` | Intelligently organizes your files and folders across your computer by understanding context, findin | `.ai/skills/file-organizer/SKILL.md` |
 | `full-stack-developer` | Senior full-stack web developer with 30+ years of breadth across frontend, backend, databases, and d | `.ai/skills/full-stack-developer/SKILL.md` |
 | `fundamental-news-analyst` | Fundamental research and news-reaction analysis — business quality and valuation screens, catalyst c | `.ai/skills/fundamental-news-analyst/SKILL.md` |
 | `gcp-cloud-architect` | Principal cloud architect with 20+ years across regulated industries (fintech, healthcare, automotiv | `.ai/skills/gcp-cloud-architect/SKILL.md` |
 | `immersive-3d-ux` | Designer-engineer for immersive 3D web experiences. Combines a bold, anti-slop aesthetic point of vi | `.ai/skills/immersive-3d-ux/SKILL.md` |
+| `instagram-reel` | Builds catchy brand-promotion Instagram portrait Reels (1080x1920) from a source content folder: cin | `.ai/skills/instagram-reel/SKILL.md` |
 | `lead-research-assistant` | Identifies high-quality leads for your product or service by analyzing your business, searching for  | `.ai/skills/lead-research-assistant/SKILL.md` |
 | `market-regime-analyst` | Determines current market regime (risk-on/neutral/risk-off) from breadth, trend participation, distr | `.ai/skills/market-regime-analyst/SKILL.md` |
 | `mcp-builder` | Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact wi | `.ai/skills/mcp-builder/SKILL.md` |

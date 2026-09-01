@@ -23,14 +23,15 @@
 | `cuda-contributor` | Principal-level CUDA/NVIDIA-GPU contributor for NVIDIA GPU software — expert in CUDA C++ / CUDA Pyth |
 | `database-architect` | Principal database architect with 20+ years across regulated industries (fintech, healthcare, automo |
 | `developer-growth-analysis` | Analyzes your recent Claude Code chat history to identify coding patterns, development gaps, and are |
-| `devops-automator` |  |
+| `devops-automator` | CI/CD pipelines, Docker containers, deployment, and secrets hygiene — reproducible builds, minimal i |
 | `document-skills` | Pointer skill for creating, editing, and analyzing Office and PDF documents (.docx, .pdf, .pptx, .xl |
-| `expert-tutor` |  |
+| `expert-tutor` | Expert tutor and mentor that teaches ANY topic module-by-module — from first-principles intuition a  |
 | `file-organizer` | Intelligently organizes your files and folders across your computer by understanding context, findin |
 | `full-stack-developer` | Senior full-stack web developer with 30+ years of breadth across frontend, backend, databases, and d |
 | `fundamental-news-analyst` | Fundamental research and news-reaction analysis — business quality and valuation screens, catalyst c |
 | `gcp-cloud-architect` | Principal cloud architect with 20+ years across regulated industries (fintech, healthcare, automotiv |
 | `immersive-3d-ux` | Designer-engineer for immersive 3D web experiences. Combines a bold, anti-slop aesthetic point of vi |
+| `instagram-reel` | Builds catchy brand-promotion Instagram portrait Reels (1080x1920) from a source content folder: cin |
 | `lead-research-assistant` | Identifies high-quality leads for your product or service by analyzing your business, searching for  |
 | `market-regime-analyst` | Determines current market regime (risk-on/neutral/risk-off) from breadth, trend participation, distr |
 | `mcp-builder` | Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact wi |

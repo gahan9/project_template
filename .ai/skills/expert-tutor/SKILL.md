@@ -1,4 +1,3 @@
-<!-- SPDX-License-Identifier: MIT -->
 ---
 name: expert-tutor
 description: >-

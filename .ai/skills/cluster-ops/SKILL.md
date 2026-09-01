@@ -19,7 +19,7 @@ description: >-
   offerings, or evaluate hybrid OpenShift/Kubernetes platform patterns.
 license: MIT
 metadata:
-  version: 1.2.0
+  version: 1.1.0
   authors: [gsaraiya]
   portability: Agent Skills open standard (Cursor, Claude Code, Copilot, Codex, Antigravity, Windsurf, Zed)
 ---
@@ -37,8 +37,7 @@ the operating practices of major GPU clouds.
 under-provision the bottleneck.** Every design decision must trace to a
 measured or estimated requirement (model size, dataset throughput, comms
 pattern, availability target, budget). When a requirement is unknown, ask for
-it only when the answer materially changes cost/risk or an irreversible choice;
-otherwise proceed with a safe default, assumption log, and confidence level.
+it or state the assumption explicitly — do not silently guess.
 
 ## Decision workflow
 
@@ -46,7 +45,6 @@ Work through these gates in order. Do not skip ahead; each gate feeds the next.
 
 ```
 Task Progress:
-- [ ] 0. Resolve material ambiguity; log assumptions + confidence
 - [ ] 1. Classify the workload
 - [ ] 2. Pick the scale tier
 - [ ] 3. Select accelerators + node shape
@@ -55,23 +53,10 @@ Task Progress:
 - [ ] 6. Design storage + data path
 - [ ] 7. Engineer reliability + observability
 - [ ] 8. Secure + govern (multi-tenant, secrets, licensing)
-- [ ] 9. Cost/reliability/complexity decision
+- [ ] 9. Cost model + build vs. rent decision
 - [ ] 10. Validate against a reference design
-- [ ] 11. Apply DigitalOcean/inference gates when in scope
-- [ ] 12. Apply hybrid OCP gates when in scope
+- [ ] 11. (Hybrid OCP) Apply platform pattern gates if Kubernetes/OpenShift is in scope
 ```
-
-### 0. Resolve material ambiguity
-
-Collect workload, model, demand, SLO/RTO/RPO, data/security, budget, and operator
-maturity inputs. Ask a question only if its answer can materially alter cost,
-risk, provider fit, security, availability, or an irreversible decision.
-Otherwise continue with documented safe defaults.
-
-Every design with unknowns must include an assumption log (`assumption`,
-`evidence/default`, `impact if wrong`, `owner/date to validate`) and a **High /
-Medium / Low** confidence rating. Follow the full intake and safe-default rules
-in `digitalocean-ai-inference-patterns.md`.
 
 ### 1. Classify the workload
 
@@ -147,12 +132,6 @@ See `provider-patterns.md` → "Schedulers". Quick guide:
 - **Ray** — Pythonic distributed for RL/serving/data; layers on K8s or Slurm.
 - **LSF / PBS Pro / HTCondor** — established enterprise/HTC estates.
 
-For AI serving, do not select an orchestrator or runtime by popularity. Route
-through `digitalocean-ai-inference-patterns.md` to decide online vs. batch,
-vLLM/TGI/Triton/Ray Serve/KServe fit, replica vs. tensor parallelism, bounded
-batching/queues, and vertical vs. horizontal scaling from measured workload and
-model-footprint inputs.
-
 ### 6. Design storage + data path
 
 - **Parallel FS** for scratch/checkpoint: Lustre, IBM Spectrum Scale (GPFS),
@@ -200,19 +179,7 @@ top-500 reference system in `reference-architectures.md` and confirm the
 interconnect ratio, checkpoint strategy, and precision choices are consistent
 with what has actually worked at that scale.
 
-### 11. Apply DigitalOcean and inference gates
-
-When **DigitalOcean, Paperspace, model serving, or inference** is in scope, run
-the decision and production gates in `digitalocean-ai-inference-patterns.md`.
-Compare GPU Droplets/Paperspace, CPU Droplets, DOKS, and App Platform where
-applicable. State hard constraints and measurable exit/migration triggers.
-
-Never force tightly coupled multi-node training onto DigitalOcean without
-representative proof of gang capacity, topology, RDMA/GPUDirect collective
-performance, and checkpoint throughput. If that proof is absent, recommend a
-provider with a documented training fabric.
-
-### 12. (Hybrid OCP) Apply platform pattern gates
+### 11. (Hybrid OCP) Apply platform pattern gates
 
 When the design includes **OpenShift, ARO, or multi-cluster Kubernetes** (not
 just bare Slurm/GPU fabric), run the gated decision flow in
@@ -236,36 +203,12 @@ the Kubernetes slice, not the batch fabric. Flag misfit workloads early.
 - `scaling-tiers.md` — SMB→enterprise→exascale decision tables and archetypes.
 - `provider-patterns.md` — AWS, GCP, Azure, Lambda, CoreWeave, TensorWave,
   DigitalOcean, and Kubernetes best-practice building blocks + scheduler guide.
-- `digitalocean-ai-inference-patterns.md` — ambiguous-requirements intake,
-  DigitalOcean placement and production patterns, inference sizing/serving,
-  failure modes, observability/SLO gates, and migration triggers.
 - `reference-architectures.md` — ACM Gordon Bell Prize systems (Summit,
   Frontier, Fugaku, Sunway, El Capitan, LUMI, Aurora) and the design lesson each
   teaches.
 - `citations.md` — papers, standards, and vendor docs to cite and where to verify.
 - `openshift-hybrid-design-patterns.md` — hybrid OCP pattern catalog, off-track
   risk flags, remedy plans, and gated decision framework (IBM ARO + MeatyBytes).
-
-## Required output contract and validation gate
-
-Every recommendation must:
-
-1. Select **one recommended option** and reject serious alternatives with
-   reasons using cost, reliability, and operational complexity.
-2. Start with a plain-language explanation for non-experts.
-3. Include assumptions + confidence, architecture, trade-offs, failure modes
-   (`detect / mitigate / prevent`), rollout/rollback, observability/SLO, a
-   low/base/high cost envelope, and measurable migration triggers.
-4. For production AI, report p50/p95/p99, TTFT, inter-token latency, tokens/s,
-   queue time/depth, errors, GPU utilization/HBM/thermals/ECC/XID, model/version
-   labels, SLO burn alerts, and capacity headroom where applicable.
-5. Mark load, soak, rollback, dependency/failure, restore, security, and
-   capacity-headroom checks **PASS or FAIL** with evidence. Missing evidence is
-   `FAIL`; either remediate and rerun or record a named, expiring risk acceptance
-   with blast radius and compensating control.
-
-Use the concise deliverable template and binary remediation criteria in
-`digitalocean-ai-inference-patterns.md`.
 
 ## Documentation & citation rules (apply to every answer and change)
 
@@ -309,10 +252,7 @@ run it (or read it) to snapshot cluster health before deeper work.
 3. Can it scale one tier up without a rewrite? If not, is that acceptable?
 4. Reliability & security: checkpointing, health, isolation, secrets, licensing.
 5. Cost: is $/useful-result defensible vs. the rent-vs-own alternative?
-6. **DigitalOcean/inference (if applicable):** Did the design pass provider-fit,
-   model-footprint, SLO, capacity, failure-mode, and production-readiness gates?
-   Are hard exits and migration triggers explicit?
-7. **Hybrid OCP (if applicable):** Are platform patterns sequenced correctly?
+6. **Hybrid OCP (if applicable):** Are platform patterns sequenced correctly?
    Any risk flags from `openshift-hybrid-design-patterns.md` active? Is there a
    confirmed remedy if identity sprawl, mesh-before-inventory, or GitOps secret
    leakage is detected?

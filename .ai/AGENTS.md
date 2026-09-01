@@ -231,6 +231,7 @@ the `memory` block of `.ai/hooks-config.json`.
 | `document-skills` | create docx, edit pdf, build pptx, xlsx | Pointer skill: defer to native/permissive doc tooling (no proprietary copy) |
 | `twitter-algorithm-optimizer` | optimize this tweet, improve reach | Clean-room tweet/X optimization (no AGPL code) |
 | `content-marketing-expert` | create a reel, youtube shorts script, content marketing, seo blog post, repurpose this content | Multi-platform campaign orchestrator: layman copy, five-pass iterative loop, offline-first asset routing, ensemble review, resumable memory shots |
+| `instagram-reel` | instagram reel, ig reel, 9:16 reel, brand promo reel, cinematic reel, reel from this folder | Portrait Instagram Reel from a source folder: 1080x1920 cinematic VFX open/cuts/close, caption and hashtags; identity-safe (no face/person restyle); delegates copy to content-marketing-expert |
 
 ## Subagents Reference
 

@@ -28,6 +28,7 @@
 | fundamental-news-analyst | `.ai/skills/fundamental-news-analyst/SKILL.md` |
 | gcp-cloud-architect | `.ai/skills/gcp-cloud-architect/SKILL.md` |
 | immersive-3d-ux | `.ai/skills/immersive-3d-ux/SKILL.md` |
+| instagram-reel | `.ai/skills/instagram-reel/SKILL.md` |
 | lead-research-assistant | `.ai/skills/lead-research-assistant/SKILL.md` |
 | market-regime-analyst | `.ai/skills/market-regime-analyst/SKILL.md` |
 | mcp-builder | `.ai/skills/mcp-builder/SKILL.md` |
