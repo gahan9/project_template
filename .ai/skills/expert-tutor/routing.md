@@ -1,4 +1,4 @@
-<!-- SPDX-License-Identifier: MIT -->
+_SPDX-License-Identifier: MIT_
 # Routing — mentor delegation + delivery-format map + token budget
 
 The tutor is a router. It teaches what it can teach well directly, and delegates
@@ -16,24 +16,25 @@ borrow the specialist's rigor for the technical core.
 | HPC / AI cluster design, fabric, scheduler, storage, scale | `cluster-ops` | interconnect, Slurm/K8s, checkpointing, exascale, GPU cluster sizing |
 | AMD GPU programming, HIP/ROCm, build/release | `rocm-contributor` | HIP kernel, ROCm, gfx target, TheRock, amdgpu, rocBLAS/RCCL |
 | NVIDIA GPU programming, CUDA, nvcc/PTX | `cuda-contributor` | CUDA kernel, nvcc, compute capability, cuBLAS, NCCL, cuda-samples |
-| Architecture, security, ROI, licensing, packaging, GPU compute strategy | `principal-engineer` | scalability, threat model, SPDX/licensing, build-vs-buy |
+| Architecture, security, ROI, licensing, packaging, GPU compute strategy | `engineering-gate-review` | scalability, threat model, SPDX/licensing, build-vs-buy |
 | Service/package layout, connectors, config, state | `backend-architect` | service boundaries, async I/O, settings, transport |
 | Data model, indexing, sharding, migrations, HA/DR | `database-architect` | schema design, query tuning, partition, replication |
 | Cloud design/review (AWS / GCP / Azure) | `aws-/gcp-/azure-cloud-architect` | landing zone, VPC, IAM/Entra, well-architected |
 | Firmware / UEFI / EDK II boot flow | `principal-uefi-engineer` | PEIM, DXE/SMM, ACPI, boot flow, edk2 |
-| Agent/LLM pipelines, structured outputs, gateway | `ai-engineer` | agent graph, confidence threshold, rule-based-first |
+| CPU ISA (x86 / Arm), NPU/DSP, Adreno GPU, or a compute/graphics runtime (QAIRT, oneAPI, Vulkan, D3D11/12, OpenCL, OpenGL) | teach directly using [hardware-and-runtimes.md](hardware-and-runtimes.md) | Snapdragon, Hexagon, QNN, AArch64, SDM, SYCL, SPIR-V, shader, NPU |
+| Agent/LLM pipelines, structured outputs, gateway | `llm-pipeline-engineer` | agent graph, confidence threshold, rule-based-first |
 | Readability / clean-code review, over-engineering audit | `clean-code` | story flow, abstraction value, find bloat |
 | Requirements phrasing | `ears-requirements` | shall-statements, unambiguous requirement |
 | Research paper / publication strategy | `research-publication-expert` / `paper-writer` | novelty, target venue, citation strategy |
 
 **Rule:** invoke the specialist **at the gate**, once the current module needs
 that depth — never load all specialists preemptively. If no specialist fits,
-teach directly and cite from `citations.md`.
+teach directly and cite from [citations.md](citations.md).
 
 ## 2. Delivery-format -> tool / skill
 
 Chosen by the learner at workflow gate 4 (via `AskQuestion`). Details in
-`delivery-formats.md`.
+[delivery-formats.md](delivery-formats.md).
 
 | Learner wants | Invoke | Notes |
 |---------------|--------|-------|

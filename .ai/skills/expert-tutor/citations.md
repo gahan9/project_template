@@ -1,4 +1,4 @@
-<!-- SPDX-License-Identifier: MIT -->
+_SPDX-License-Identifier: MIT_
 # Citations — where to find credible sources and how to cite them
 
 The tutor's authority comes from grounding, not confidence. This file lists where
@@ -12,7 +12,7 @@ to find verifiable sources per domain and the rules for citing them.
 - **Cite the primary source** where practical (the paper, the standard, the
   vendor doc), not a blog that summarizes it — unless the blog *is* the primary
   engineering account.
-- **Link, don't lecture.** Attach a one-line takeaway and an inline hyperlink;
+- **Link, don't excerpt.** Attach a one-line takeaway and an inline hyperlink;
   do not paste long excerpts (wastes tokens, risks copyright).
 - **Date-sensitive claims** (SKUs, prices, rankings, "latest version") must note
   "verify current value at <link>" — these drift.
@@ -48,6 +48,20 @@ to find verifiable sources per domain and the rules for citing them.
   — pair with the `cuda-contributor` skill.
 - Cluster scale: ACM [Gordon Bell Prize](https://awards.acm.org/bell),
   [Top500](https://top500.org) — pair with the `cluster-ops` skill.
+
+## Hardware, NPU, and compute runtimes
+
+Full per-runtime source table lives in [hardware-and-runtimes.md](hardware-and-runtimes.md).
+Public Qualcomm entry points: [developer portal](https://www.qualcomm.com/developer),
+[Qualcomm docs](https://docs.qualcomm.com/), [AI Hub](https://aihub.qualcomm.com/),
+[AI Engine Direct SDK](https://www.qualcomm.com/developer/software/qualcomm-ai-engine-direct-sdk),
+[Hexagon NPU SDK](https://www.qualcomm.com/developer/software/hexagon-npu-sdk).
+CPU ISA manuals: [Intel SDM](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html),
+[Arm Architecture Reference Manual](https://developer.arm.com/documentation/ddi0487/latest).
+Graphics/compute standards: [Khronos registry (Vulkan)](https://registry.khronos.org/vulkan/),
+[OpenCL](https://registry.khronos.org/OpenCL/), [OpenGL](https://registry.khronos.org/OpenGL/),
+[Direct3D 12](https://learn.microsoft.com/en-us/windows/win32/direct3d12/directx-12-programming-guide).
+Prefer public sources in learner-facing material; never cite internal-only documents.
 
 ## Software engineering / architecture
 

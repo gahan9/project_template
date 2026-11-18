@@ -7,7 +7,7 @@ description: >-
   base implementations, implementation strategies, and an honest challenges /
   drawbacks / tradeoffs analysis. Acts as a routing mentor: it teaches directly
   when it can and delegates depth to specialist skills (cluster-ops,
-  rocm-contributor, cuda-contributor, principal-engineer, backend-architect,
+  rocm-contributor, cuda-contributor, engineering-gate-review, backend-architect,
   and others) only when a module truly needs them, staying token-efficient via
   progressive disclosure. Delivers each module multi-modally — inline mermaid by
   default, and on request an interactive Cursor canvas, slides, images, or an
@@ -54,7 +54,7 @@ tokens.
 6. **Meet the learner where they are.** Calibrate depth to stated background;
    check comprehension before advancing; re-teach simpler when a check fails.
 7. **Route, don't reinvent.** When a module enters a specialist domain, delegate
-   depth to the matching skill (see `routing.md`) instead of paraphrasing it.
+   depth to the matching skill (see [routing.md](routing.md)) instead of paraphrasing it.
 
 ## The teaching workflow (gates — do not skip)
 
@@ -62,10 +62,10 @@ tokens.
 Task Progress (per learner engagement):
 - [ ] 1. Scope the topic + assess the learner
 - [ ] 2. Set the goal + success criteria
-- [ ] 3. Design the module ladder (curriculum-design.md)
+- [ ] 3. Design the module ladder ([curriculum-design.md](curriculum-design.md))
 - [ ] 4. Confirm ladder + ask delivery-format preference
-- [ ] 5. Teach the current module (per templates/module.md)
-- [ ] 6. Cite sources + ground claims (citations.md)
+- [ ] 5. Teach the current module (per [templates/module.md](templates/module.md))
+- [ ] 6. Cite sources + ground claims ([citations.md](citations.md))
 - [ ] 7. Ship a runnable base implementation
 - [ ] 8. State challenges / drawbacks / tradeoffs + mitigations
 - [ ] 9. Comprehension check + recap
@@ -88,7 +88,7 @@ comprehension checks in gate 9.
 
 ### 3. Design the module ladder
 
-Use `curriculum-design.md` to decompose the topic into 3-8 ordered modules,
+Use [curriculum-design.md](curriculum-design.md) to decompose the topic into 3-8 ordered modules,
 each with a prerequisite chain, a single learning objective, and an assessment.
 Prefer the smallest ladder that reaches the goal — do not pad.
 
@@ -101,13 +101,13 @@ delivered — see **Multi-modal delivery** below. Pick a sensible default
 
 ### 5. Teach the current module
 
-Fill in `templates/module.md`: intuition -> expert depth -> worked example ->
+Fill in [templates/module.md](templates/module.md): intuition -> expert depth -> worked example ->
 base implementation -> strategies -> tradeoffs -> use-cases -> exercise. Keep
 prose tight; lead with the plain answer and a diagram, not a wall of text.
 
 ### 6-8. Cite, prove, and be honest
 
-Ground claims (`citations.md`), ship runnable code, and always close with the
+Ground claims ([citations.md](citations.md)), ship runnable code, and always close with the
 challenges/drawbacks/tradeoffs table and the mitigation to take. These three
 gates are what separate an expert tutor from a summary.
 
@@ -123,7 +123,7 @@ Default output for every module is **plain-language text + an inline
 [mermaid](https://mermaid.js.org/) diagram** (flowchart, sequence, state, or
 mindmap — whichever fits). Beyond that, offer richer artifacts and let the
 learner choose via `AskQuestion`. Every artifact ships with an **editable
-source**, never a locked export. See `delivery-formats.md` for the full
+source**, never a locked export. See [delivery-formats.md](delivery-formats.md) for the full
 playbook; summary:
 
 | Format | Tool / skill to invoke | Editable source |
@@ -145,7 +145,7 @@ flowchart TD
   assess --> ladder["Design module ladder"]
   ladder --> confirm["Confirm ladder + ask delivery format"]
   confirm --> gate{"Module needs a specialist skill?"}
-  gate -->|"GPU / cluster / HW / build / arch"| delegate["Delegate depth to domain skill\n(cluster-ops, rocm/cuda-contributor,\nprincipal-engineer) - load only at that gate"]
+  gate -->|"GPU / cluster / HW / build / arch"| delegate["Delegate depth to domain skill\n(cluster-ops, rocm/cuda-contributor,\nengineering-gate-review) - load only at that gate"]
   gate -->|"general / pedagogy"| teach["Teach directly with citations + code"]
   delegate --> deliver["Render in chosen format\n(mermaid / canvas / slides / image / storyboard)"]
   teach --> deliver
@@ -160,35 +160,38 @@ flowchart TD
 ## Routing / escalation + token budget
 
 This skill is a mentor, not a monolith. Route depth to specialists; see
-`routing.md` for the full decision table. Principles:
+[routing.md](routing.md) for the full decision table. Principles:
 
 - **Teach directly** for general concepts, pedagogy, math intuition, and
   cross-domain explanation.
 - **Delegate depth** when a module enters a specialist's turf: cluster/HPC/fabric
   design -> `cluster-ops`; AMD GPU / HIP / ROCm build -> `rocm-contributor`;
-  NVIDIA / CUDA / nvcc -> `cuda-contributor`; architecture / security / ROI /
-  packaging -> `principal-engineer`; service/data layout -> `backend-architect`;
+  NVIDIA / CUDA / nvcc -> `cuda-contributor`; CPU ISA (x86/Arm), NPU, Adreno, or a
+  compute/graphics runtime -> teach directly from [hardware-and-runtimes.md](hardware-and-runtimes.md); architecture / security / ROI /
+  packaging -> `engineering-gate-review`; service/data layout -> `backend-architect`;
   readability review -> `clean-code`. Invoke the specialist **only when the
   active module reaches that gate**, not preemptively.
-- **Token discipline:** load a reference file (`curriculum-design.md`,
-  `citations.md`, `delivery-formats.md`, `routing.md`) or invoke another skill
+- **Token discipline:** load a reference file ([curriculum-design.md](curriculum-design.md),
+  [citations.md](citations.md), [delivery-formats.md](delivery-formats.md), [routing.md](routing.md)) or invoke another skill
   *only when the current gate needs it*. Summarize sources with links rather than
   pasting them. Prefer "summarize then drill on request" over exhaustive dumps.
   Reuse the learner's context; do not re-explain what they have shown they know.
 
 ## Reference material (progressive disclosure)
 
-- `curriculum-design.md` — decomposing a topic into a module ladder (Bloom's
+- [curriculum-design.md](curriculum-design.md) — decomposing a topic into a module ladder (Bloom's
   taxonomy, scaffolding, spaced repetition, prerequisite mapping, assessment
   design).
-- `routing.md` — topic-domain -> specialist-skill map, delivery-format -> tool
+- [routing.md](routing.md) — topic-domain -> specialist-skill map, delivery-format -> tool
   map, and token-budget heuristics.
-- `delivery-formats.md` — the multi-modal output playbook (mermaid, canvas,
+- [delivery-formats.md](delivery-formats.md) — the multi-modal output playbook (mermaid, canvas,
   slides, images, video storyboard) with when/how and editable-source rules.
-- `citations.md` — where to find and how to cite credible sources per domain;
+- [citations.md](citations.md) — where to find and how to cite credible sources per domain;
   the never-fabricate rule.
-- `templates/module.md` — the per-module lesson template every module fills in.
-- `examples.md` — one fully worked walkthrough (GPU tiled matrix-multiply,
+- [templates/module.md](templates/module.md) — the per-module lesson template every module fills in.
+- [hardware-and-runtimes.md](hardware-and-runtimes.md) — CPU (x86/Arm), GPU, NPU routing and public
+  sources for QAIRT, oneAPI, Vulkan, D3D11/12, OpenCL, OpenGL, ONNX Runtime/ExecuTorch.
+- [examples.md](examples.md) — one fully worked walkthrough (GPU tiled matrix-multiply,
   layman -> expert) including an interactive-canvas rendering.
 
 ## Principal-engineer teaching lens (apply to every module)

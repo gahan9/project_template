@@ -1,4 +1,4 @@
-<!-- SPDX-License-Identifier: MIT -->
+_SPDX-License-Identifier: MIT_
 # Worked Example — teaching "tiled matrix multiply on a GPU"
 
 A complete, condensed walkthrough of the tutor workflow for one topic, showing
@@ -35,7 +35,7 @@ Routing note: modules 1-3 are general GPU-performance intuition the tutor teache
 directly; module 4 (reading a real HIP/CUDA kernel, occupancy, bank conflicts)
 reaches the `cuda-contributor` / `rocm-contributor` gate and delegates that depth.
 
-## Gate 5-9 — teaching Module 3 (abridged, using templates/module.md)
+## Gate 5-9 — teaching Module 3 (abridged, using [templates/module.md](templates/module.md))
 
 ### Module 3 — Learner will be able to explain how tiling raises data reuse
 

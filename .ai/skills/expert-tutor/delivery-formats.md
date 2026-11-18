@@ -1,4 +1,4 @@
-<!-- SPDX-License-Identifier: MIT -->
+_SPDX-License-Identifier: MIT_
 # Delivery Formats — the multi-modal output playbook
 
 Every module can be delivered in more than one medium. The default is text +

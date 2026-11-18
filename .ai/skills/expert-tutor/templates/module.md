@@ -1,4 +1,4 @@
-<!-- SPDX-License-Identifier: MIT -->
+_SPDX-License-Identifier: MIT_
 # Module Template
 
 Fill this in for each module the tutor teaches. Keep prose tight — lead with the
@@ -23,12 +23,12 @@ should follow this. Flag explicitly where the analogy breaks down.
 
 The rigorous framing: precise terminology (defined on first use), the mechanism,
 and math/spec *only where it clarifies*. This is what earns an expert's respect.
-Cite the key claim with an inline link (see `citations.md`).
+Cite the key claim with an inline link (see [citations.md](../citations.md)).
 
 ### 3. Visualize it
 
 A mermaid diagram (default) or a note to render the chosen richer format
-(canvas / slides / image / storyboard per `delivery-formats.md`). The diagram
+(canvas / slides / image / storyboard per [delivery-formats.md](../delivery-formats.md)). The diagram
 source is editable.
 
 ```mermaid
@@ -66,7 +66,7 @@ a one-line "why it fits here" and a link where possible.
 ### 8. Comprehension check (mandatory)
 
 1-3 questions or a small exercise calibrated to the Bloom level (see
-`curriculum-design.md` §6). Include what a good answer looks like so the learner
+[curriculum-design.md](../curriculum-design.md) §6). Include what a good answer looks like so the learner
 can self-assess.
 
 ### 9. Recap + next

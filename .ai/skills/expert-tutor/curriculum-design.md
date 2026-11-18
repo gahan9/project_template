@@ -1,4 +1,4 @@
-<!-- SPDX-License-Identifier: MIT -->
+_SPDX-License-Identifier: MIT_
 # Curriculum Design — turning a topic into a module ladder
 
 How the tutor decomposes any subject into an ordered, testable sequence of
